@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- 🧠 Plausible Analytics -->
   <script defer data-domain="shyamsunder89.github.io" src="http://localhost:8000/js/script.js"></script>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shyam Sunder Daggupati | DevOps Engineer</title>
+
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
 </head>
 
 <body class="dark">
-  <header class="hero">
-    <!-- 🌗 Floating Dark/Light Mode Toggle -->
-    <button id="theme-toggle" class="theme-btn" aria-label="Toggle dark/light mode">🌙</button>
+  <!-- 🌗 Floating Dark/Light Mode Toggle -->
+  <button id="theme-toggle" class="theme-btn" aria-label="Toggle dark/light mode">🌙</button>
 
+  <header class="hero">
     <div class="container">
       <h1 class="fade-in">Shyam Sunder Daggupati</h1>
       <h2 class="fade-in">Senior DevOps Engineer</h2>
@@ -27,8 +30,10 @@
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
+    <a href="#analytics">Analytics</a>
   </nav>
 
+  <!-- 👤 About Section -->
   <section id="about" class="section fade-up">
     <h2>About Me</h2>
     <p>
@@ -39,6 +44,7 @@
     </p>
   </section>
 
+  <!-- 🧩 Projects Section -->
   <section id="projects" class="section fade-up">
     <h2>Featured Projects</h2>
 
@@ -46,108 +52,113 @@
       <div class="card">
         <h3>AKS + GitHub Actions Runner Deployment</h3>
         <p>Self-hosted GitHub Actions Runner with OIDC authentication on Azure Kubernetes Service.</p>
-        <a href="https://github.com/ssdaggupati/aks-github-actions-demo" target="_blank">🔗 View Project</a>
+        <a href="https://github.com/ssdaggupati/aks-github-actions-demo" target="_blank" rel="noopener">🔗 View Project</a>
       </div>
 
       <div class="card">
         <h3>EKS + Lambda CI/CD Pipeline</h3>
         <p>Automated serverless deployments via GitHub Actions with Terraform provisioning on AWS.</p>
-        <a href="https://github.com/ssdaggupati/eks-gha-runner-oidc" target="_blank">🔗 View Project</a>
+        <a href="https://github.com/ssdaggupati/eks-gha-runner-oidc" target="_blank" rel="noopener">🔗 View Project</a>
       </div>
 
       <div class="card">
         <h3>Terraform Multi-Cloud Infrastructure</h3>
         <p>Cross-cloud IaC setup for AWS and Azure using modular Terraform architecture.</p>
-        <a href="https://github.com/ssdaggupati/multi-cloud-iac" target="_blank">🔗 View Project</a>
+        <a href="https://github.com/ssdaggupati/multi-cloud-iac" target="_blank" rel="noopener">🔗 View Project</a>
       </div>
     </div>
   </section>
 
-  <!-- ✉️ Contact Section with AJAX Success Message -->
+  <!-- ✉️ Contact Section -->
   <section id="contact" class="section fade-up">
     <h2>Contact</h2>
     <form id="contactForm" action="https://formspree.io/f/movpopra" method="POST" class="contact-form">
-      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="email" name="email" placeholder="Your Email" required />
       <textarea name="message" placeholder="Your Message" required></textarea>
       <button type="submit">Send Message</button>
       <p id="form-status"></p>
     </form>
   </section>
+
+  <!-- 📈 Analytics Section -->
   <section id="analytics" class="section fade-up">
-  <h2>📈 Site Analytics</h2>
-  <p>Real-time visitor statistics powered by <a href="https://plausible.io" target="_blank">Plausible</a>.</p>
-  
-  <div class="analytics-frame">
-    <iframe 
-      src="http://localhost:8000/shyamsunder89.github.io"
-      width="100%" 
-      height="600" 
-      style="border:none; border-radius:12px;"
-      loading="lazy"
-      title="Plausible Analytics Dashboard">
-    </iframe>
-  </div>
-</section>
+    <h2>📈 Site Analytics</h2>
+    <p>
+      Real-time visitor statistics powered by 
+      <a href="https://plausible.io" target="_blank" rel="noopener">Plausible</a>.
+    </p>
+
+    <div class="analytics-frame">
+      <!-- Replace localhost with your public Plausible URL if hosted online -->
+      <iframe
+        src="http://localhost:8000/shyamsunder89.github.io"
+        width="100%"
+        height="600"
+        style="border:none;"
+        loading="lazy"
+        title="Plausible Analytics Dashboard">
+      </iframe>
+    </div>
+  </section>
 
   <footer>
     <p>© 2025 Shyam Sunder Daggupati – All Rights Reserved.</p>
   </footer>
 
   <script>
-    // Smooth scroll for internal links
+    // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
+      anchor.addEventListener('click', e => {
         e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
+        document.querySelector(anchor.getAttribute('href')).scrollIntoView({
           behavior: 'smooth'
         });
       });
     });
 
-    // 🌗 Theme toggle logic
+    // 🌗 Theme Toggle Logic
     const toggleBtn = document.getElementById('theme-toggle');
     const body = document.body;
 
-    // Load saved theme
     if (localStorage.getItem('theme') === 'light') {
       body.classList.replace('dark', 'light');
       toggleBtn.textContent = '☀️';
     }
 
     toggleBtn.addEventListener('click', () => {
-      if (body.classList.contains('dark')) {
-        body.classList.replace('dark', 'light');
-        toggleBtn.textContent = '☀️';
-        localStorage.setItem('theme', 'light');
-      } else {
-        body.classList.replace('light', 'dark');
-        toggleBtn.textContent = '🌙';
-        localStorage.setItem('theme', 'dark');
-      }
+      const dark = body.classList.contains('dark');
+      body.classList.replace(dark ? 'dark' : 'light', dark ? 'light' : 'dark');
+      toggleBtn.textContent = dark ? '☀️' : '🌙';
+      localStorage.setItem('theme', dark ? 'light' : 'dark');
       toggleBtn.classList.add('spin');
       setTimeout(() => toggleBtn.classList.remove('spin'), 400);
     });
 
-    // ✉️ Formspree AJAX Submission + Success Message
+    // ✉️ Formspree AJAX Submission
     const form = document.getElementById("contactForm");
     const status = document.getElementById("form-status");
 
-    form.addEventListener("submit", async (e) => {
+    form.addEventListener("submit", async e => {
       e.preventDefault();
       const data = new FormData(form);
-      const res = await fetch(form.action, {
-        method: form.method,
-        body: data,
-        headers: { 'Accept': 'application/json' }
-      });
+      try {
+        const res = await fetch(form.action, {
+          method: form.method,
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
 
-      if (res.ok) {
-        status.textContent = "✅ Thank you! Your message has been sent.";
-        status.style.color = "var(--accent)";
-        form.reset();
-      } else {
-        status.textContent = "❌ Oops! Something went wrong. Please try again.";
-        status.style.color = "red";
+        if (res.ok) {
+          status.textContent = "✅ Thank you! Your message has been sent.";
+          status.style.color = "var(--accent)";
+          form.reset();
+        } else {
+          status.textContent = "❌ Oops! Something went wrong. Please try again.";
+          status.style.color = "red";
+        }
+      } catch (err) {
+        status.textContent = "⚠️ Network error. Try again later.";
+        status.style.color = "orange";
       }
 
       status.classList.add("fade-in");
