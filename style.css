@@ -293,3 +293,35 @@ body.dark .analytics-frame {
 body.light .analytics-frame {
   background: rgba(0,0,0,0.03);
 }
+
+
+:root {
+  --bg-dark: #0a0f1a;
+  --bg-light: #1e293b;
+  --accent: #38bdf8;
+  --text: #f8fafc;
+  --text-muted: #a1a1aa;
+  --radius: 12px;
+}
+
+/* Improve contrast for light theme */
+body.light {
+  --bg-dark: #ffffff;
+  --bg-light: #e2e8f0;
+  --text: #0f172a;
+  --text-muted: #475569;
+  --accent: #2563eb;
+}
+
+button, .btn {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+button:hover, .btn:hover {
+  background: #0ea5e9;
+}
