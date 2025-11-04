@@ -7,12 +7,17 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
 </head>
-<body>
+<body class="dark">
   <header class="hero">
     <div class="container">
       <h1 class="fade-in">Shyam Sunder Daggupati</h1>
       <h2 class="fade-in">Senior DevOps Engineer</h2>
       <p class="fade-in tagline">Azure | AWS | Terraform | Kubernetes | CI/CD | DevSecOps</p>
+
+      <!-- 🌗 Dark/Light Mode Toggle -->
+      <button id="theme-toggle" class="theme-btn" aria-label="Toggle dark/light mode">
+        🌙 Dark Mode
+      </button>
     </div>
   </header>
 
@@ -68,7 +73,7 @@
   </footer>
 
   <script>
-    // Smooth scroll
+    // Smooth scroll for internal links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -76,6 +81,28 @@
           behavior: 'smooth'
         });
       });
+    });
+
+    // 🌗 Theme toggle logic
+    const toggleBtn = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    // Load saved theme
+    if (localStorage.getItem('theme') === 'light') {
+      body.classList.replace('dark', 'light');
+      toggleBtn.textContent = '☀️ Light Mode';
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      if (body.classList.contains('dark')) {
+        body.classList.replace('dark', 'light');
+        toggleBtn.textContent = '☀️ Light Mode';
+        localStorage.setItem('theme', 'light');
+      } else {
+        body.classList.replace('light', 'dark');
+        toggleBtn.textContent = '🌙 Dark Mode';
+        localStorage.setItem('theme', 'dark');
+      }
     });
   </script>
 </body>
