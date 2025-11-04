@@ -193,3 +193,22 @@ body.light footer {
   background: var(--bg-light);
   border-color: #cbd5e1;
 }
+
+/* Floating Theme Toggle */
+.theme-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: var(--bg-light);
+  color: var(--text);
+  border: 1px solid var(--accent);
+  border-radius: 20px;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+.theme-btn:hover {
+  background: var(--accent);
+  color: #0f172a;
+}

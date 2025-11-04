@@ -9,15 +9,15 @@
 </head>
 <body class="dark">
   <header class="hero">
+    <!-- 🌗 Floating Dark/Light Mode Toggle -->
+    <button id="theme-toggle" class="theme-btn" aria-label="Toggle dark/light mode">🌙</button>
+
     <div class="container">
       <h1 class="fade-in">Shyam Sunder Daggupati</h1>
       <h2 class="fade-in">Senior DevOps Engineer</h2>
-      <p class="fade-in tagline">Azure | AWS | Terraform | Kubernetes | CI/CD | DevSecOps</p>
-
-      <!-- 🌗 Dark/Light Mode Toggle -->
-      <button id="theme-toggle" class="theme-btn" aria-label="Toggle dark/light mode">
-        🌙 Dark Mode
-      </button>
+      <p class="fade-in tagline">
+        Azure | AWS | Terraform | Kubernetes | CI/CD | DevSecOps
+      </p>
     </div>
   </header>
 
@@ -90,19 +90,23 @@
     // Load saved theme
     if (localStorage.getItem('theme') === 'light') {
       body.classList.replace('dark', 'light');
-      toggleBtn.textContent = '☀️ Light Mode';
+      toggleBtn.textContent = '☀️';
     }
 
     toggleBtn.addEventListener('click', () => {
       if (body.classList.contains('dark')) {
         body.classList.replace('dark', 'light');
-        toggleBtn.textContent = '☀️ Light Mode';
+        toggleBtn.textContent = '☀️';
         localStorage.setItem('theme', 'light');
       } else {
         body.classList.replace('light', 'dark');
-        toggleBtn.textContent = '🌙 Dark Mode';
+        toggleBtn.textContent = '🌙';
         localStorage.setItem('theme', 'dark');
       }
+
+      // Simple animation
+      toggleBtn.classList.add('spin');
+      setTimeout(() => toggleBtn.classList.remove('spin'), 400);
     });
   </script>
 </body>
