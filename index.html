@@ -4,12 +4,35 @@
   <!-- 🧠 Plausible Analytics -->
   <script defer data-domain="shyamsunder89.github.io" src="http://localhost:8000/js/script.js"></script>
 
+  <!-- ✅ SEO + Open Graph + Twitter Meta -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shyam Sunder Daggupati | DevOps Engineer</title>
+  <title>Shyam Sunder Daggupati | Senior DevOps Engineer</title>
 
-  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Portfolio of Shyam Sunder Daggupati — Senior DevOps Engineer with 11+ years of experience in Azure, AWS, Terraform, Kubernetes, CI/CD automation, and DevSecOps practices." />
+  <meta name="keywords" content="Shyam Sunder Daggupati, DevOps Engineer, Azure, AWS, Terraform, Kubernetes, CI/CD, GitHub Actions, Cloud Engineer, DevSecOps, Portfolio, Plausible Analytics" />
+  <meta name="author" content="Shyam Sunder Daggupati" />
+  <link rel="canonical" href="https://shyamsunder89.github.io/" />
+
+  <!-- 🌐 Open Graph (LinkedIn, Facebook, Slack) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://shyamsunder89.github.io/" />
+  <meta property="og:title" content="Shyam Sunder Daggupati | Senior DevOps Engineer" />
+  <meta property="og:description" content="Explore Shyam Sunder Daggupati’s DevOps portfolio showcasing CI/CD pipelines, Terraform IaC, Kubernetes deployments, and cloud automation projects." />
+  <meta property="og:image" content="https://shyamsunder89.github.io/assets/preview.png" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- 🐦 Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Shyam Sunder Daggupati | Senior DevOps Engineer" />
+  <meta name="twitter:description" content="Senior DevOps Engineer specializing in Azure, AWS, Terraform, Kubernetes, and CI/CD automation." />
+  <meta name="twitter:image" content="https://shyamsunder89.github.io/assets/preview.png" />
+
+  <!-- ⚡ Performance + Branding -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta name="theme-color" content="#0b1120" />
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body class="dark">
@@ -23,6 +46,7 @@
       <p class="fade-in tagline">
         Azure | AWS | Terraform | Kubernetes | CI/CD | DevSecOps
       </p>
+      <a href="assets/resume.pdf" class="btn" download>📄 Download Resume</a>
     </div>
   </header>
 
@@ -89,7 +113,6 @@
     </p>
 
     <div class="analytics-frame">
-      <!-- Replace localhost with your public Plausible URL if hosted online -->
       <iframe
         src="http://localhost:8000/shyamsunder89.github.io"
         width="100%"
@@ -110,9 +133,7 @@
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', e => {
         e.preventDefault();
-        document.querySelector(anchor.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
+        document.querySelector(anchor.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
       });
     });
 
