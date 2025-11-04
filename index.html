@@ -5,36 +5,78 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shyam Sunder Daggupati | DevOps Engineer</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
 </head>
 <body>
-  <header>
-    <h1>Shyam Sunder Daggupati</h1>
-    <p>Senior DevOps Engineer | Azure  AWS  Terraform  Kubernetes  CI/CD</p>
+  <header class="hero">
+    <div class="container">
+      <h1 class="fade-in">Shyam Sunder Daggupati</h1>
+      <h2 class="fade-in">Senior DevOps Engineer</h2>
+      <p class="fade-in tagline">Azure | AWS | Terraform | Kubernetes | CI/CD | DevSecOps</p>
+    </div>
   </header>
 
-  <section id="about">
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about" class="section fade-up">
     <h2>About Me</h2>
-    <p>Results-driven DevOps Engineer with 11 + years of experience designing and automating multi-cloud platforms.</p>
+    <p>
+      Results-driven DevOps Engineer with 11+ years of hands-on experience designing,
+      securing, and automating multi-cloud platforms across Azure and AWS.
+      Specialized in Infrastructure as Code (Terraform), CI/CD pipeline automation,
+      and container orchestration with Kubernetes.
+    </p>
   </section>
 
-  <section id="projects">
+  <section id="projects" class="section fade-up">
     <h2>Featured Projects</h2>
-    <ul>
-      <li>AKS + GitHub Actions Runner Deployment</li>
-      <li>EKS + Lambda CI/CD Pipeline</li>
-      <li>Terraform Multi-Cloud Infrastructure</li>
-    </ul>
+
+    <div class="projects-grid">
+      <div class="card">
+        <h3>AKS + GitHub Actions Runner Deployment</h3>
+        <p>Self-hosted GitHub Actions Runner with OIDC authentication on Azure Kubernetes Service.</p>
+        <a href="https://github.com/ssdaggupati/aks-github-actions-demo" target="_blank">🔗 View Project</a>
+      </div>
+
+      <div class="card">
+        <h3>EKS + Lambda CI/CD Pipeline</h3>
+        <p>Automated serverless deployments via GitHub Actions with Terraform provisioning on AWS.</p>
+        <a href="https://github.com/ssdaggupati/eks-gha-runner-oidc" target="_blank">🔗 View Project</a>
+      </div>
+
+      <div class="card">
+        <h3>Terraform Multi-Cloud Infrastructure</h3>
+        <p>Cross-cloud IaC setup for AWS and Azure using modular Terraform architecture.</p>
+        <a href="https://github.com/ssdaggupati/multi-cloud-iac" target="_blank">🔗 View Project</a>
+      </div>
+    </div>
   </section>
 
-  <section id="contact">
+  <section id="contact" class="section fade-up">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:shyamsunderprogramer@gmail.com">shyamsunderprogramer@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/shyam-sunder-daggupati">linkedin.com/in/shyam-sunder-daggupati</a></p>
-    <p>GitHub: <a href="https://github.com/ssdaggupati">github.com/ssdaggupati</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/shyam-sunder-daggupati" target="_blank">linkedin.com/in/shyam-sunder-daggupati</a></p>
+    <p>GitHub: <a href="https://github.com/ssdaggupati" target="_blank">github.com/ssdaggupati</a></p>
   </section>
 
   <footer>
     <p>© 2025 Shyam Sunder Daggupati – All Rights Reserved.</p>
   </footer>
+
+  <script>
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
 </body>
 </html>
