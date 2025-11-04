@@ -213,32 +213,44 @@ body.light footer {
   color: #0f172a;
 }
 
-
+/* ===== Contact Form Styling ===== */
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
+  align-items: center;
+  gap: 1rem;
   max-width: 400px;
-  margin: auto;
+  margin: 2rem auto;
 }
+
 .contact-form input,
 .contact-form textarea {
-  padding: 0.6rem;
+  width: 100%;
+  padding: 0.8rem;
   border: 1px solid #334155;
-  border-radius: 6px;
+  border-radius: 8px;
+  font-size: 1rem;
   background: var(--bg-light);
   color: var(--text);
+  resize: vertical;
 }
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: var(--text-muted);
+}
+
 .contact-form button {
   background: var(--accent);
   color: #fff;
   border: none;
-  padding: 0.6rem;
-  border-radius: 6px;
-  cursor: pointer;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
   font-size: 1rem;
-  transition: background 0.3s;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
+
 .contact-form button:hover {
   background: #0ea5e9;
 }
