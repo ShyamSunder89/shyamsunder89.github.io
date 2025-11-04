@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
 </head>
+
 <body class="dark">
   <header class="hero">
     <!-- 🌗 Floating Dark/Light Mode Toggle -->
@@ -61,19 +62,16 @@
     </div>
   </section>
 
-    <section id="contact" class="section fade-up">
+  <!-- ✉️ Contact Section with AJAX Success Message -->
+  <section id="contact" class="section fade-up">
     <h2>Contact</h2>
-    <form action="https://formspree.io/f/movpopra" method="POST" class="contact-form">
-        <label>
-        <input type="email" name="email" placeholder="Your Email" required>
-        </label>
-        <label>
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        </label>
-        <button type="submit">Send Message</button>
+    <form id="contactForm" action="https://formspree.io/f/movpopra" method="POST" class="contact-form">
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+      <p id="form-status"></p>
     </form>
-    </section>
-
+  </section>
 
   <footer>
     <p>© 2025 Shyam Sunder Daggupati – All Rights Reserved.</p>
@@ -110,10 +108,34 @@
         toggleBtn.textContent = '🌙';
         localStorage.setItem('theme', 'dark');
       }
-
-      // Simple animation
       toggleBtn.classList.add('spin');
       setTimeout(() => toggleBtn.classList.remove('spin'), 400);
+    });
+
+    // ✉️ Formspree AJAX Submission + Success Message
+    const form = document.getElementById("contactForm");
+    const status = document.getElementById("form-status");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      const res = await fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (res.ok) {
+        status.textContent = "✅ Thank you! Your message has been sent.";
+        status.style.color = "var(--accent)";
+        form.reset();
+      } else {
+        status.textContent = "❌ Oops! Something went wrong. Please try again.";
+        status.style.color = "red";
+      }
+
+      status.classList.add("fade-in");
+      setTimeout(() => status.textContent = "", 6000);
     });
   </script>
 </body>
