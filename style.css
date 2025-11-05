@@ -408,19 +408,13 @@ nav a:hover {
 /* Achievements */
 .achievements {
   margin-top: 1.5rem;
-}
-
-.achievements h3 {
-  color: var(--accent);
-  font-size: 1.1rem;
-  margin-bottom: 0.75rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
 }
 
 .achievements ul {
   list-style: none;
   padding-left: 0;
-  color: var(--text-muted);
-  font-size: 0.95rem;
 }
 
 .achievements ul li {
@@ -429,12 +423,11 @@ nav a:hover {
   position: relative;
 }
 
-.achievements ul li::before {
-  content: "▹";
+.achievements ul li:before {
+  content: "•";
   color: var(--accent);
   position: absolute;
   left: 0;
-  font-weight: 600;
 }
 
 /* Skills Section */
@@ -485,30 +478,6 @@ nav a:hover {
   font-size: 1.5rem;
   opacity: 0.9;
 }
-.skill-points {
-  list-style: none;
-  padding-left: 0;
-  display: grid;
-  gap: 0.75rem;
-  color: var(--text-muted);
-  font-size: 0.95rem;
-}
-
-.skill-points li {
-  position: relative;
-  padding-left: 1.75rem;
-  line-height: 1.6;
-}
-
-.skill-points li::before {
-  content: "▹";
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: var(--accent);
-  font-weight: 600;
-}
-
 
 .skills-grid {
   display: grid;
@@ -752,6 +721,13 @@ nav a:hover {
   stroke: var(--bg-dark);
   stroke-linecap: round;
   animation: dash 1.5s ease-in-out infinite;
+}
+
+.grid-three {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(280px, 1fr));
+  gap: 2rem;
+  align-items: stretch;
 }
 
 @keyframes rotate {
