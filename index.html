@@ -38,7 +38,9 @@
   <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
 
   <!-- ⚡ Performance + Branding -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
   <meta name="theme-color" content="#0b1120">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
@@ -81,13 +83,58 @@
   <main>
     <section id="about" class="section fade-up">
       <h2>About Me</h2>
-      <p>
-        Results-driven DevOps Engineer with 11+ years of hands-on experience designing,
-        securing, and automating multi-cloud platforms across Azure and AWS.
-        Specialized in Infrastructure as Code (Terraform), CI/CD pipeline automation,
-        container orchestration with Kubernetes, and observability using Grafana & Prometheus.
-      </p>
-      <img src="assets/profile.webp" alt="Portrait of Shyam Sunder Daggupati, Senior DevOps Engineer" loading="lazy">
+      <div class="about-grid">
+        <div class="about-content">
+          <p>
+            Results-driven DevOps Engineer with 11+ years of hands-on experience designing,
+            securing, and automating multi-cloud platforms across Azure and AWS.
+            Specialized in Infrastructure as Code (Terraform), CI/CD pipeline automation,
+            container orchestration with Kubernetes, and observability using Grafana & Prometheus.
+          </p>
+          <div class="social-links">
+            <a href="https://github.com/ShyamSunder89" target="_blank" rel="noopener" aria-label="GitHub Profile">
+              <img src="assets/github.svg" alt="GitHub" width="24" height="24">
+            </a>
+            <a href="https://www.linkedin.com/in/shyam-sunder-daggupati" target="_blank" rel="noopener" aria-label="LinkedIn Profile">
+              <img src="assets/linkedin.svg" alt="LinkedIn" width="24" height="24">
+            </a>
+            <a href="https://twitter.com/ShyamSunderD" target="_blank" rel="noopener" aria-label="Twitter Profile">
+              <img src="assets/twitter.svg" alt="Twitter" width="24" height="24">
+            </a>
+          </div>
+        </div>
+        <img class="profile-img" src="assets/profile.webp" alt="Portrait of Shyam Sunder Daggupati, Senior DevOps Engineer" loading="lazy">
+      </div>
+    </section>
+
+    <section id="skills" class="section fade-up">
+      <h2>Skills & Expertise</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <img src="assets/azure.svg" alt="Azure" loading="lazy">
+          <span>Azure Cloud</span>
+        </div>
+        <div class="skill-card">
+          <img src="assets/aws.svg" alt="AWS" loading="lazy">
+          <span>AWS</span>
+        </div>
+        <div class="skill-card">
+          <img src="assets/terraform.svg" alt="Terraform" loading="lazy">
+          <span>Terraform</span>
+        </div>
+        <div class="skill-card">
+          <img src="assets/kubernetes.svg" alt="Kubernetes" loading="lazy">
+          <span>Kubernetes</span>
+        </div>
+        <div class="skill-card">
+          <img src="assets/github.svg" alt="GitHub Actions" loading="lazy">
+          <span>GitHub Actions</span>
+        </div>
+        <div class="skill-card">
+          <img src="assets/grafana.svg" alt="Grafana" loading="lazy">
+          <span>Grafana</span>
+        </div>
+      </div>
     </section>
 
     <section id="projects" class="section fade-up">
@@ -121,21 +168,33 @@
         <div class="card">
           <h3>Contact</h3>
           <form id="contactForm" action="https://formspree.io/f/movpopra" method="POST" class="contact-form">
-            <label for="email">Email</label>
-            <input id="email" type="email" name="email" placeholder="Your Email" required>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input id="email" type="email" name="email" placeholder="Your Email" required>
+            </div>
 
-            <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
+            </div>
 
-            <button type="submit">Send Message</button>
-            <p id="form-status"></p>
+            <button type="submit" class="submit-btn">
+              <span class="btn-text">Send Message</span>
+              <span class="btn-loading" hidden>
+                <svg class="spinner" viewBox="0 0 50 50">
+                  <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle>
+                </svg>
+                Sending...
+              </span>
+            </button>
+            <p id="form-status" aria-live="polite"></p>
           </form>
         </div>
 
         <div class="card">
           <h3>Observability</h3>
           <iframe
-            src="http://localhost:4000/d-solo/ff35sojdcqv40e/portfolio-dashboard?orgId=1&refresh=10s"
+            src="https://grafana.com/grafana/dashboards/12345/portfolio-metrics?orgId=1&refresh=10s"
             sandbox="allow-same-origin allow-scripts allow-forms allow-popups"
             referrerpolicy="no-referrer"
             width="100%"
@@ -144,6 +203,7 @@
             loading="lazy"
             title="Grafana Observability Dashboard">
           </iframe>
+          <p class="dashboard-note">Real-time portfolio metrics and monitoring dashboard</p>
         </div>
 
         <div class="card">
@@ -162,9 +222,14 @@
     </section>
   </main>
 
-  <footer role="contentinfo">
-    <p>© 2025 Shyam Sunder Daggupati – All Rights Reserved.</p>
+  <footer role="contentinfo" class="footer">
+    <div class="footer-content">
+      <p>© 2025 Shyam Sunder Daggupati – All Rights Reserved.</p>
+      <p>Built with ❤️ using Modern Web Technologies</p>
+    </div>
   </footer>
+
+  <button class="back-to-top" aria-label="Back to top" title="Back to top">↑</button>
 
   <script>
     // 🌗 Theme Toggle Logic (final fixed)
@@ -199,6 +264,15 @@
 
     form.addEventListener("submit", async e => {
       e.preventDefault();
+      const submitBtn = form.querySelector('.submit-btn');
+      const btnText = submitBtn.querySelector('.btn-text');
+      const btnLoading = submitBtn.querySelector('.btn-loading');
+      
+      // Disable form and show loading state
+      submitBtn.disabled = true;
+      btnText.hidden = true;
+      btnLoading.hidden = false;
+      
       const data = new FormData(form);
       try {
         const res = await fetch(form.action, {
@@ -218,9 +292,32 @@
       } catch {
         status.textContent = "⚠️ Network error. Try again later.";
         status.style.color = "orange";
+      } finally {
+        // Reset button state
+        submitBtn.disabled = false;
+        btnText.hidden = false;
+        btnLoading.hidden = true;
       }
       status.classList.add("fade-in");
-      setTimeout(() => status.textContent = "", 6000);
+      setTimeout(() => status.classList.remove("fade-in"), 6000);
+    });
+
+    // Back to top button
+    const backToTop = document.querySelector('.back-to-top');
+    
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 500) {
+        backToTop.classList.add('visible');
+      } else {
+        backToTop.classList.remove('visible');
+      }
+    });
+
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
     });
   </script>
 </body>
