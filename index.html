@@ -78,7 +78,6 @@
     <a href="#contact-dashboard">Dashboard</a>
   </nav>
 
-  <!-- 👤 About Section -->
   <main>
     <section id="about" class="section fade-up">
       <h2>About Me</h2>
@@ -91,7 +90,6 @@
       <img src="assets/profile.webp" alt="Portrait of Shyam Sunder Daggupati, Senior DevOps Engineer" loading="lazy">
     </section>
 
-    <!-- 🧩 Projects Section -->
     <section id="projects" class="section fade-up">
       <h2>Featured Projects</h2>
       <div class="projects-grid">
@@ -118,54 +116,50 @@
       </div>
     </section>
 
-    <!-- 📨 Contact + 📊 Grafana + 🗺️ Map -->
-  <section id="contact-dashboard" class="section fade-up">
-    <div class="grid-three">
-      <!-- 📨 Contact Card -->
-      <div class="card">
-        <h3>Contact</h3>
-        <form id="contactForm" action="https://formspree.io/f/movpopra" method="POST" class="contact-form">
-          <label for="email">Email</label>
-          <input id="email" type="email" name="email" placeholder="Your Email" required>
+    <section id="contact-dashboard" class="section fade-up">
+      <div class="grid-three">
+        <div class="card">
+          <h3>Contact</h3>
+          <form id="contactForm" action="https://formspree.io/f/movpopra" method="POST" class="contact-form">
+            <label for="email">Email</label>
+            <input id="email" type="email" name="email" placeholder="Your Email" required>
 
-          <label for="message">Message</label>
-          <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
 
-          <button type="submit">Send Message</button>
-          <p id="form-status"></p>
-        </form>
+            <button type="submit">Send Message</button>
+            <p id="form-status"></p>
+          </form>
+        </div>
+
+        <div class="card">
+          <h3>Observability</h3>
+          <iframe
+            src="http://localhost:4000/d-solo/ff35sojdcqv40e/portfolio-dashboard?orgId=1&refresh=10s"
+            sandbox="allow-same-origin allow-scripts allow-forms allow-popups"
+            referrerpolicy="no-referrer"
+            width="100%"
+            height="350"
+            style="border:none; border-radius:8px;"
+            loading="lazy"
+            title="Grafana Observability Dashboard">
+          </iframe>
+        </div>
+
+        <div class="card">
+          <h3>Location</h3>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11773.874716932998!2d-71.8023!3d42.5836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e3b7b86ff5e6c9%3A0xf6b4b6a602f245cc!2sFitchburg%2C%20MA!5e0!3m2!1sen!2sus!4v1730688000000!5m2!1sen!2sus"
+            width="100%"
+            height="350"
+            style="border:none; border-radius:8px;"
+            allowfullscreen=""
+            loading="lazy"
+            title="Map showing Fitchburg, MA">
+          </iframe>
+        </div>
       </div>
-
-      <!-- 📊 Observability / Grafana -->
-      <div class="card">
-        <h3>Observability</h3>
-        <iframe
-          src="http://localhost:4000/d-solo/ff35sojdcqv40e/portfolio-dashboard?orgId=1&refresh=10s"
-          sandbox="allow-same-origin allow-scripts allow-forms allow-popups"
-          referrerpolicy="no-referrer"
-          width="100%"
-          height="350"
-          style="border:none; border-radius:8px;"
-          loading="lazy"
-          title="Grafana Observability Dashboard">
-        </iframe>
-      </div>
-
-      <!-- 🗺️ Location Card -->
-      <div class="card">
-        <h3>Location</h3>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11773.874716932998!2d-71.8023!3d42.5836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e3b7b86ff5e6c9%3A0xf6b4b6a602f245cc!2sFitchburg%2C%20MA!5e0!3m2!1sen!2sus!4v1730688000000!5m2!1sen!2sus"
-          width="100%"
-          height="350"
-          style="border:none; border-radius:8px;"
-          allowfullscreen=""
-          loading="lazy"
-          title="Map showing Fitchburg, MA">
-        </iframe>
-      </div>
-    </div>
-  </section>
+    </section>
   </main>
 
   <footer role="contentinfo">
@@ -173,43 +167,33 @@
   </footer>
 
   <script>
-    // Smooth scroll
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', e => {
-        e.preventDefault();
-        document.querySelector(anchor.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-      });
+    // 🌗 Theme Toggle Logic (final fixed)
+    const toggleBtn = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+    const savedTheme = localStorage.getItem('theme');
+
+    if (savedTheme) {
+      body.classList.remove('dark', 'light');
+      body.classList.add(savedTheme);
+    } else {
+      body.classList.add(prefersLight ? 'light' : 'dark');
+    }
+
+    toggleBtn.textContent = body.classList.contains('light') ? '☀️' : '🌙';
+
+    toggleBtn.addEventListener('click', () => {
+      const newTheme = body.classList.contains('light') ? 'dark' : 'light';
+      body.classList.remove('light', 'dark');
+      body.classList.add(newTheme);
+      localStorage.setItem('theme', newTheme);
+      toggleBtn.textContent = newTheme === 'light' ? '☀️' : '🌙';
+      toggleBtn.classList.add('spin');
+      setTimeout(() => toggleBtn.classList.remove('spin'), 400);
     });
 
-  // 🌗 Theme Toggle Logic (fixed version)
-  const toggleBtn = document.getElementById('theme-toggle');
-  const body = document.body;
-
-  // Initialize theme
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme) {
-    body.classList.remove('dark', 'light');
-    body.classList.add(savedTheme);
-    toggleBtn.textContent = savedTheme === 'light' ? '☀️' : '🌙';
-  } else {
-    body.classList.add('dark'); // default
-    toggleBtn.textContent = '🌙';
-  }
-
-  // On click, toggle between dark and light
-  toggleBtn.addEventListener('click', () => {
-    const isDark = body.classList.contains('dark');
-    body.classList.toggle('dark', !isDark);
-    body.classList.toggle('light', isDark);
-    localStorage.setItem('theme', isDark ? 'light' : 'dark');
-    toggleBtn.textContent = isDark ? '☀️' : '🌙';
-    
-    // spin animation
-    toggleBtn.classList.add('spin');
-    setTimeout(() => toggleBtn.classList.remove('spin'), 400);
-  });
-
-    // ✉️ Formspree AJAX Submission
+    // ✉️ Contact Form
     const form = document.getElementById("contactForm");
     const status = document.getElementById("form-status");
 
@@ -228,14 +212,13 @@
           status.style.color = "var(--accent)";
           form.reset();
         } else {
-          status.textContent = "❌ Oops! Something went wrong. Please try again.";
+          status.textContent = "❌ Oops! Something went wrong.";
           status.style.color = "red";
         }
-      } catch (err) {
+      } catch {
         status.textContent = "⚠️ Network error. Try again later.";
         status.style.color = "orange";
       }
-
       status.classList.add("fade-in");
       setTimeout(() => status.textContent = "", 6000);
     });

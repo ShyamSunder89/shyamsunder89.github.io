@@ -1,4 +1,3 @@
-/* ========== General Layout ========== */
 :root {
   --bg-dark: #0f172a;
   --bg-light: #1e293b;
@@ -20,9 +19,10 @@ body {
   background: var(--bg-dark);
   color: var(--text);
   line-height: 1.6;
+  transition: background 0.4s ease, color 0.4s ease;
 }
 
-/* ========== Header / Hero ========== */
+/* ========== Hero Section ========== */
 .hero {
   text-align: center;
   padding: 5rem 1rem 3rem;
@@ -46,7 +46,7 @@ body {
   color: var(--text-muted);
 }
 
-/* ========== Navigation ========== */
+/* Navigation */
 nav {
   display: flex;
   justify-content: center;
@@ -70,7 +70,7 @@ nav a:hover {
   color: var(--accent);
 }
 
-/* ========== Sections ========== */
+/* Sections */
 .section {
   max-width: 1000px;
   margin: auto;
@@ -85,7 +85,7 @@ nav a:hover {
   padding-bottom: 0.3rem;
 }
 
-/* ========== Projects Grid ========== */
+/* Projects */
 .projects-grid {
   display: grid;
   gap: 1.5rem;
@@ -126,72 +126,19 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* ====== Three Column Layout ====== */
+/* Grid Three */
 .grid-three {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   margin-top: 2rem;
-  align-items: start;
 }
 
-.grid-three .card {
-  background: rgba(255, 255, 255, 0.06);
-  padding: 1.5rem;
-  border-radius: 16px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  height: 100%;
-}
-
-.grid-three .card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-}
-
-/* ===== Box Titles (Contact | Observability | Location) ===== */
-.grid-three .card h3 {
-  color: var(--accent);
-  text-align: left;
-  margin-bottom: 1rem;
-  border-bottom: 1px solid var(--accent);
-  padding-bottom: 0.3rem;
-}
-
-/* ===== Section Header Row (no longer used but kept for consistency) ===== */
-.grid-headings {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: var(--accent);
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  text-align: center;
-}
-
-.grid-headings span {
-  padding: 0 0.5rem;
-}
-
-.grid-headings span:nth-child(2),
-.grid-headings span:nth-child(4) {
-  color: var(--text-muted);
-  font-weight: 400;
-}
-
-/* ===== Contact Form ===== */
+/* Contact Form */
 .contact-form {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 1rem;
-  max-width: 400px;
-  margin: 0 auto;
 }
 
 .contact-form input,
@@ -203,12 +150,6 @@ nav a:hover {
   font-size: 1rem;
   background: var(--bg-light);
   color: var(--text);
-  resize: vertical;
-}
-
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-  color: var(--text-muted);
 }
 
 .contact-form button {
@@ -217,21 +158,14 @@ nav a:hover {
   border: none;
   padding: 0.7rem 1.5rem;
   border-radius: 8px;
-  font-size: 1rem;
   cursor: pointer;
-  transition: background 0.3s ease;
 }
 
 .contact-form button:hover {
   background: #0ea5e9;
 }
 
-#form-status {
-  font-weight: 500;
-  margin-top: 0.5rem;
-}
-
-/* ===== Footer ===== */
+/* Footer */
 footer {
   text-align: center;
   padding: 1rem;
@@ -240,22 +174,9 @@ footer {
   color: var(--text-muted);
 }
 
-/* ===== Responsive ===== */
-@media (max-width: 1024px) {
-  .grid-three {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  }
-
-  .grid-headings {
-    flex-direction: column;
-    gap: 0.4rem;
-  }
-}
-
-
-/* 🌗 Theme Toggle Button — Fixed Top Right */
+/* Theme Toggle */
 .theme-btn {
-  position: fixed;          /* keep it always visible */
+  position: fixed;
   top: 20px;
   right: 20px;
   background: var(--bg-light);
@@ -265,7 +186,7 @@ footer {
   padding: 0.5rem 1rem;
   font-size: 1rem;
   cursor: pointer;
-  z-index: 999;             /* make sure it's above everything */
+  z-index: 999;
   transition: all 0.3s ease;
 }
 
@@ -274,23 +195,12 @@ footer {
   color: #0f172a;
 }
 
-/* Small spin animation on click */
 .theme-btn.spin {
   transform: rotate(360deg);
   transition: transform 0.4s ease;
 }
 
-/* Adjust position for mobile screens */
-@media (max-width: 600px) {
-  .theme-btn {
-    top: 15px;
-    right: 15px;
-    padding: 0.4rem 0.8rem;
-    font-size: 0.9rem;
-  }
-}
-
-/* 🌞 Light Theme Overrides */
+/* 🌞 Light Theme */
 body.light {
   --bg-dark: #f8fafc;
   --bg-light: #e2e8f0;
@@ -299,105 +209,32 @@ body.light {
   --accent: #2563eb;
 }
 
-/* Adjust navigation and footer for light mode */
-body.light nav,
-body.light footer {
-  background: var(--bg-light);
-  border-color: #cbd5e1;
-}
-
-/* 🌞 Light Theme Visual Tweaks */
-body.light .hero {
-  background: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%);
-  border-bottom: 1px solid #cbd5e1;
-}
-
-body.light .card {
-  background: var(--bg-light);
-}
-
-body.light .card a {
-  color: var(--accent);
-}
-
-body.light .card a:hover {
-  text-decoration: underline;
-}
-
-body.light .theme-btn {
-  background: var(--bg-dark);
-  color: var(--text);
-  border: 1px solid var(--accent);
-}
-
-body.light .theme-btn:hover {
-  background: var(--accent);
-  color: #f8fafc;
-}
-
-/* ====== Three Column Layout ====== */
-.grid-three {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  margin-top: 2rem;
-  align-items: start;
-}
-
-/* ===== Responsive ===== */
-@media (max-width: 1024px) {
-  .grid-three {  
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  }
-  .grid-headings {
-    flex-direction: column;
-    gap: 0.4rem;
-  } 
-}
-
-@media (max-width: 900px) {
-  .grid-three {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* ✨ Ensure transitions for smooth switch */
-body {
-  transition: background 0.4s ease, color 0.4s ease;
-}
-
-/* 🌞 Complete Light Mode Support */
 body.light {
   background: var(--bg-dark);
   color: var(--text);
 }
 
-/* Hero Section */
 body.light .hero {
   background: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%);
   border-bottom: 1px solid #cbd5e1;
 }
 
-/* Navbar and Footer */
 body.light nav,
 body.light footer {
   background: var(--bg-light);
   border-color: #cbd5e1;
 }
 
-/* Cards */
 body.light .card {
   background: var(--bg-light);
   color: var(--text);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Card Headings */
-body.light .card h3 {
-  color: var(--accent);
+body.light .tagline {
+  color: var(--text-muted);
 }
 
-/* Contact Form Inputs */
 body.light .contact-form input,
 body.light .contact-form textarea {
   background: #fff;
@@ -405,24 +242,24 @@ body.light .contact-form textarea {
   color: #1e293b;
 }
 
-/* Tagline Text */
-body.light .tagline {
-  color: var(--text-muted);
-}
-
-/* Links */
-body.light a {
-  color: var(--accent);
-}
-
-/* Theme Button */
 body.light .theme-btn {
   background: var(--bg-light);
   color: var(--text);
-  border: 1px solid var(--accent);
 }
 
 body.light .theme-btn:hover {
   background: var(--accent);
   color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .grid-three {
+    grid-template-columns: 1fr;
+  }
+
+  .theme-btn {
+    top: 15px;
+    right: 15px;
+  }
 }
