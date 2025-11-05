@@ -116,7 +116,27 @@
             </a>
           </div>
         </div>
-        <img class="profile-img" src="assets/profile.webp" alt="Portrait of Shyam Sunder Daggupati, Senior DevOps Engineer" loading="lazy">
+        <div class="profile-hero" aria-label="Profile portrait and decorative graphics">
+          <div class="profile-frame">
+            <!-- Decorative SVG blob behind the photo -->
+            <svg class="blob" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+              <g transform="translate(300,300)">
+                <path fill="#6EE7B7" opacity="0.12">
+                  <animate attributeName="d" dur="8s" repeatCount="indefinite"
+                    values="M120,-160C160,-120,200,-80,210,-30C220,20,200,80,170,120C140,160,90,190,40,210C-10,230,-70,240,-110,210C-150,180,-170,110,-190,40C-210,-30,-220,-100,-190,-140C-160,-180,-90,-190,-30,-180C30,-170,60,-200,120,-160Z;
+                            M160,-130C200,-90,210,-20,200,40C190,100,160,150,110,180C60,210,-10,220,-70,200C-130,180,-170,140,-200,80C-230,20,-240,-40,-220,-100C-200,-160,-160,-200,-110,-220C-60,-240,-30,-210,20,-200C70,-190,120,-170,160,-130Z;
+                            M120,-160C160,-120,200,-80,210,-30C220,20,200,80,170,120C140,160,90,190,40,210C-10,230,-70,240,-110,210C-150,180,-170,110,-190,40C-210,-30,-220,-100,-190,-140C-160,-180,-90,-190,-30,-180C30,-170,60,-200,120,-160Z"/>
+                </path>
+              </g>
+            </svg>
+
+            <img class="profile-img" src="assets/profile.webp" alt="Portrait of Shyam Sunder Daggupati, Senior DevOps Engineer" loading="lazy">
+
+            <!-- Gradient halo ring -->
+            <span class="halo" aria-hidden="true"></span>
+
+          </div>
+        </div>
       </div>
     </section>
 
@@ -175,20 +195,38 @@
               <div class="skill-description">Pipeline automation and build management</div>
             </div>
             <div class="skill-item">
-              <span class="skill-name" data-skill="Grafana">Grafana</span>
-              <div class="skill-description">Metrics visualization and system monitoring</div>
-            </div>
-            <div class="skill-item">
-              <span class="skill-name" data-skill="Terraform">Terraform</span>
-              <div class="skill-description">Infrastructure as Code and cloud provisioning</div>
+              <span class="skill-name" data-skill="Jira">Jira</span>
+              <div class="skill-description">Project tracking and agile management</div>
             </div>
             <div class="skill-item">
               <span class="skill-name" data-skill="Ansible">Ansible</span>
               <div class="skill-description">Configuration management and automation</div>
             </div>
             <div class="skill-item">
-              <span class="skill-name" data-skill="Kubernetes">Kubernetes</span>
-              <div class="skill-description">Container orchestration and cluster management</div>
+              <span class="skill-name" data-skill="HashiCorp">HashiCorp Suite</span>
+              <div class="skill-description">Infrastructure and secrets management</div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name" data-skill="Helm">Helm</span>
+              <div class="skill-description">Kubernetes package management</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <h3><span class="skill-icon" aria-hidden="true">📊</span>Monitoring & Observability</h3>
+          <div class="skills-grid">
+            <div class="skill-item">
+              <span class="skill-name" data-skill="Prometheus">Prometheus</span>
+              <div class="skill-description">Metrics collection and alerting</div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name" data-skill="Grafana">Grafana</span>
+              <div class="skill-description">Metrics visualization and dashboards</div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name" data-skill="Elastic">Elastic Stack</span>
+              <div class="skill-description">Log aggregation and analysis</div>
             </div>
           </div>
         </div>
