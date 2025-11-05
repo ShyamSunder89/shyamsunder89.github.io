@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- 🧠 Plausible Analytics -->
-  <script defer data-domain="shyamsunder89.github.io" src="https://plausible.io/js/script.js"></script>
-
   <!-- ✅ SEO + Open Graph + Twitter Meta -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shyam Sunder Daggupati | Senior DevOps Engineer</title>
 
   <meta name="description" content="Portfolio of Shyam Sunder Daggupati — Senior DevOps Engineer with 11+ years of experience in Azure, AWS, Terraform, Kubernetes, CI/CD automation, and DevSecOps practices.">
-  <meta name="keywords" content="Shyam Sunder Daggupati, DevOps Engineer, Azure, AWS, Terraform, Kubernetes, CI/CD, GitHub Actions, Cloud Engineer, DevSecOps, Portfolio, Plausible Analytics">
+  <meta name="keywords" content="Shyam Sunder Daggupati, DevOps Engineer, Azure, AWS, Terraform, Kubernetes, CI/CD, GitHub Actions, Cloud Engineer, DevSecOps, Grafana, Monitoring">
   <meta name="author" content="Shyam Sunder Daggupati">
   <link rel="canonical" href="https://shyamsunder89.github.io/">
 
@@ -18,28 +15,27 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://shyamsunder89.github.io/">
   <meta property="og:title" content="Shyam Sunder Daggupati | Senior DevOps Engineer">
-  <meta property="og:description" content="Explore Shyam Sunder Daggupati’s DevOps portfolio showcasing CI/CD pipelines, Terraform IaC, Kubernetes deployments, and cloud automation projects.">
+  <meta property="og:description" content="Explore Shyam Sunder Daggupati’s DevOps portfolio showcasing CI/CD pipelines, Terraform IaC, Kubernetes deployments, Grafana dashboards, and cloud automation projects.">
   <meta property="og:image" content="https://shyamsunder89.github.io/assets/preview.png">
   <meta property="og:locale" content="en_US">
 
   <!-- 🐦 Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Shyam Sunder Daggupati | Senior DevOps Engineer">
-  <meta name="twitter:description" content="Senior DevOps Engineer specializing in Azure, AWS, Terraform, Kubernetes, and CI/CD automation.">
+  <meta name="twitter:description" content="Senior DevOps Engineer specializing in Azure, AWS, Terraform, Kubernetes, CI/CD automation, and observability with Grafana.">
   <meta name="twitter:image" content="https://shyamsunder89.github.io/assets/preview.png">
 
   <!-- 🛡️ Security Headers -->
   <meta http-equiv="Content-Security-Policy"
         content="default-src 'self';
-                 script-src 'self' https://plausible.io;
                  img-src 'self' data:;
                  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
                  font-src 'self' https://fonts.gstatic.com;
-                 frame-src 'self' https://plausible.io;
-                 connect-src 'self' https://plausible.io;
+                 frame-src 'self' https://grafana.com https://*.grafana.net;
+                 connect-src 'self' https://*.grafana.net;
                  object-src 'none';">
   <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
-  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
 
   <!-- ⚡ Performance + Branding -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -71,7 +67,7 @@
     <div class="container">
       <h1 class="fade-in">Shyam Sunder Daggupati</h1>
       <h2 class="fade-in">Senior DevOps Engineer</h2>
-      <p class="fade-in tagline">Azure | AWS | Terraform | Kubernetes | CI/CD | DevSecOps</p>
+      <p class="fade-in tagline">Azure | AWS | Terraform | Kubernetes | CI/CD | DevSecOps | Observability</p>
       <a href="assets/resume.pdf" class="btn" download aria-label="Download Shyam's Resume">📄 Download Resume</a>
     </div>
   </header>
@@ -80,7 +76,7 @@
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
-    <a href="#analytics">Analytics</a>
+    <a href="#analytics">Dashboard</a>
   </nav>
 
   <!-- 👤 About Section -->
@@ -91,7 +87,7 @@
         Results-driven DevOps Engineer with 11+ years of hands-on experience designing,
         securing, and automating multi-cloud platforms across Azure and AWS.
         Specialized in Infrastructure as Code (Terraform), CI/CD pipeline automation,
-        and container orchestration with Kubernetes.
+        container orchestration with Kubernetes, and observability using Grafana & Prometheus.
       </p>
       <img src="assets/profile.webp" alt="Portrait of Shyam Sunder Daggupati, Senior DevOps Engineer" loading="lazy">
     </section>
@@ -138,24 +134,24 @@
       </form>
     </section>
 
-    <!-- 📈 Analytics Section -->
+    <!-- 📊 Grafana Dashboard Section -->
     <section id="analytics" class="section fade-up">
-      <h2>📈 Site Analytics</h2>
+      <h2>📊 Observability Dashboard</h2>
       <p>
-        Real-time visitor statistics powered by 
-        <a href="https://plausible.io" target="_blank" rel="noopener">Plausible</a>.
+        Live infrastructure metrics and real-time analytics powered by
+        <a href="https://grafana.com" target="_blank" rel="noopener">Grafana</a>.
       </p>
 
       <div class="analytics-frame">
         <iframe
-          src="http://localhost:8000/share/shyamsunder89.github.io?auth=yVTBLpKbJc4O118BbmRbA"
-          sandbox="allow-same-origin allow-scripts"
+          src="https://play.grafana.org/d/000000012/grafana-play-home"
+          sandbox="allow-same-origin allow-scripts allow-forms allow-popups"
           referrerpolicy="no-referrer"
           width="100%"
           height="600"
           style="border:none; border-radius:12px;"
           loading="lazy"
-          title="Plausible Analytics Dashboard">
+          title="Grafana Observability Dashboard">
         </iframe>
       </div>
     </section>
