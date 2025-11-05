@@ -251,3 +251,41 @@ footer {
     gap: 0.4rem;
   }
 }
+
+
+/* 🌗 Theme Toggle Button — Fixed Top Right */
+.theme-btn {
+  position: fixed;          /* keep it always visible */
+  top: 20px;
+  right: 20px;
+  background: var(--bg-light);
+  color: var(--text);
+  border: 1px solid var(--accent);
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 999;             /* make sure it's above everything */
+  transition: all 0.3s ease;
+}
+
+.theme-btn:hover {
+  background: var(--accent);
+  color: #0f172a;
+}
+
+/* Small spin animation on click */
+.theme-btn.spin {
+  transform: rotate(360deg);
+  transition: transform 0.4s ease;
+}
+
+/* Adjust position for mobile screens */
+@media (max-width: 600px) {
+  .theme-btn {
+    top: 15px;
+    right: 15px;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}
