@@ -326,29 +326,38 @@ button:hover, .btn:hover {
   background: #0ea5e9;
 }
 
-/* 🧩 3-Column Grid (Contact | Grafana | Map) */
+/* 🧩 3-column responsive layout */
 .grid-three {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
+  align-items: start;
 }
 
-.card {
-  background: rgba(255, 255, 255, 0.05);
+.grid-three .card {
+  background: rgba(255, 255, 255, 0.06);
   padding: 1.5rem;
   border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.card:hover {
+.grid-three .card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 6px 25px rgba(0,0,0,0.3);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
 .card h3 {
   text-align: center;
-  color: var(--accent, #64b5f6);
+  color: #4fc3f7;
   margin-bottom: 1rem;
 }
+
+/* Responsive fix for narrow screens */
+@media (max-width: 900px) {
+  .grid-three {
+    grid-template-columns: 1fr;
+  }
+}
+
