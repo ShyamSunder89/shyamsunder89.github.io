@@ -143,7 +143,7 @@ nav a:hover {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   height: 100%;
 }
 
@@ -152,7 +152,16 @@ nav a:hover {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* ===== Section Header Row ===== */
+/* ===== Box Titles (Contact | Observability | Location) ===== */
+.grid-three .card h3 {
+  color: var(--accent);
+  text-align: left;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 0.3rem;
+}
+
+/* ===== Section Header Row (no longer used but kept for consistency) ===== */
 .grid-headings {
   display: flex;
   justify-content: space-around;
