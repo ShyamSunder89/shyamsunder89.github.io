@@ -360,3 +360,69 @@ body.light .theme-btn:hover {
     grid-template-columns: 1fr;
   }
 }
+
+/* ✨ Ensure transitions for smooth switch */
+body {
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* 🌞 Complete Light Mode Support */
+body.light {
+  background: var(--bg-dark);
+  color: var(--text);
+}
+
+/* Hero Section */
+body.light .hero {
+  background: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%);
+  border-bottom: 1px solid #cbd5e1;
+}
+
+/* Navbar and Footer */
+body.light nav,
+body.light footer {
+  background: var(--bg-light);
+  border-color: #cbd5e1;
+}
+
+/* Cards */
+body.light .card {
+  background: var(--bg-light);
+  color: var(--text);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Headings */
+body.light .card h3 {
+  color: var(--accent);
+}
+
+/* Contact Form Inputs */
+body.light .contact-form input,
+body.light .contact-form textarea {
+  background: #fff;
+  border: 1px solid #cbd5e1;
+  color: #1e293b;
+}
+
+/* Tagline Text */
+body.light .tagline {
+  color: var(--text-muted);
+}
+
+/* Links */
+body.light a {
+  color: var(--accent);
+}
+
+/* Theme Button */
+body.light .theme-btn {
+  background: var(--bg-light);
+  color: var(--text);
+  border: 1px solid var(--accent);
+}
+
+body.light .theme-btn:hover {
+  background: var(--accent);
+  color: #fff;
+}
