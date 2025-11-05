@@ -181,23 +181,33 @@
       });
     });
 
-    // 🌗 Theme Toggle Logic
-    const toggleBtn = document.getElementById('theme-toggle');
-    const body = document.body;
+  // 🌗 Theme Toggle Logic (fixed version)
+  const toggleBtn = document.getElementById('theme-toggle');
+  const body = document.body;
 
-    if (localStorage.getItem('theme') === 'light') {
-      body.classList.replace('dark', 'light');
-      toggleBtn.textContent = '☀️';
-    }
+  // Initialize theme
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) {
+    body.classList.remove('dark', 'light');
+    body.classList.add(savedTheme);
+    toggleBtn.textContent = savedTheme === 'light' ? '☀️' : '🌙';
+  } else {
+    body.classList.add('dark'); // default
+    toggleBtn.textContent = '🌙';
+  }
 
-    toggleBtn.addEventListener('click', () => {
-      const dark = body.classList.contains('dark');
-      body.classList.replace(dark ? 'dark' : 'light', dark ? 'light' : 'dark');
-      toggleBtn.textContent = dark ? '☀️' : '🌙';
-      localStorage.setItem('theme', dark ? 'light' : 'dark');
-      toggleBtn.classList.add('spin');
-      setTimeout(() => toggleBtn.classList.remove('spin'), 400);
-    });
+  // On click, toggle between dark and light
+  toggleBtn.addEventListener('click', () => {
+    const isDark = body.classList.contains('dark');
+    body.classList.toggle('dark', !isDark);
+    body.classList.toggle('light', isDark);
+    localStorage.setItem('theme', isDark ? 'light' : 'dark');
+    toggleBtn.textContent = isDark ? '☀️' : '🌙';
+    
+    // spin animation
+    toggleBtn.classList.add('spin');
+    setTimeout(() => toggleBtn.classList.remove('spin'), 400);
+  });
 
     // ✉️ Formspree AJAX Submission
     const form = document.getElementById("contactForm");
