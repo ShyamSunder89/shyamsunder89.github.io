@@ -85,19 +85,38 @@ nav a:hover {
   bottom: 2rem;
   right: 2rem;
   background: var(--bg-light);
-  border: none;
+  border: 2px solid var(--accent);
   border-radius: 50%;
   width: 3rem;
   height: 3rem;
   font-size: 1.5rem;
   cursor: pointer;
   box-shadow: var(--shadow);
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
   z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
 }
 
 .theme-btn:hover {
   transform: scale(1.1);
+  background: var(--accent);
+  color: var(--bg-dark);
+}
+
+.theme-btn.spin {
+  animation: spin 0.4s ease-in-out;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* Animations */
@@ -195,21 +214,66 @@ nav a:hover {
   transform: translateY(-2px);
 }
 
+/* Achievements */
+.achievements {
+  margin-top: 1.5rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.achievements ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.achievements ul li {
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.achievements ul li:before {
+  content: "•";
+  color: var(--accent);
+  position: absolute;
+  left: 0;
+}
+
 /* Skills Section */
+.skills-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.skill-category {
+  background: var(--bg-light);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--shadow);
+}
+
+.skill-category h3 {
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  text-align: left;
+}
+
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 1.5rem;
-  margin-top: 2rem;
 }
 
 .skill-card {
-  background: var(--bg-light);
+  background: var(--bg-dark);
   border-radius: var(--radius);
   padding: 1rem;
   text-align: center;
-  box-shadow: var(--shadow);
   transition: transform 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .skill-card:hover {
@@ -383,6 +447,23 @@ nav a:hover {
 .card p {
   color: var(--text-muted);
   margin-bottom: 1rem;
+  min-height: 4.8rem;
+}
+
+.tech-stack {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.tech-stack span {
+  background: var(--bg-dark);
+  color: var(--accent);
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+  border: 1px solid var(--accent);
 }
 
 .card a {
