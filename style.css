@@ -289,3 +289,74 @@ footer {
     font-size: 0.9rem;
   }
 }
+
+/* 🌞 Light Theme Overrides */
+body.light {
+  --bg-dark: #f8fafc;
+  --bg-light: #e2e8f0;
+  --text: #1e293b;
+  --text-muted: #475569;
+  --accent: #2563eb;
+}
+
+/* Adjust navigation and footer for light mode */
+body.light nav,
+body.light footer {
+  background: var(--bg-light);
+  border-color: #cbd5e1;
+}
+
+/* 🌞 Light Theme Visual Tweaks */
+body.light .hero {
+  background: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%);
+  border-bottom: 1px solid #cbd5e1;
+}
+
+body.light .card {
+  background: var(--bg-light);
+}
+
+body.light .card a {
+  color: var(--accent);
+}
+
+body.light .card a:hover {
+  text-decoration: underline;
+}
+
+body.light .theme-btn {
+  background: var(--bg-dark);
+  color: var(--text);
+  border: 1px solid var(--accent);
+}
+
+body.light .theme-btn:hover {
+  background: var(--accent);
+  color: #f8fafc;
+}
+
+/* ====== Three Column Layout ====== */
+.grid-three {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+  align-items: start;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+  .grid-three {  
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  .grid-headings {
+    flex-direction: column;
+    gap: 0.4rem;
+  } 
+}
+
+@media (max-width: 900px) {
+  .grid-three {
+    grid-template-columns: 1fr;
+  }
+}
