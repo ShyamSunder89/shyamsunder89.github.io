@@ -325,3 +325,30 @@ button, .btn {
 button:hover, .btn:hover {
   background: #0ea5e9;
 }
+
+/* 🧩 3-Column Grid (Contact | Grafana | Map) */
+.grid-three {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 25px rgba(0,0,0,0.3);
+}
+
+.card h3 {
+  text-align: center;
+  color: var(--accent, #64b5f6);
+  margin-bottom: 1rem;
+}

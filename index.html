@@ -31,7 +31,7 @@
                  img-src 'self' data:;
                  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
                  font-src 'self' https://fonts.gstatic.com;
-                 frame-src 'self' https://grafana.com https://*.grafana.net;
+                 frame-src 'self' https://grafana.com https://*.grafana.net https://www.google.com https://maps.google.com;
                  connect-src 'self' https://*.grafana.net;
                  object-src 'none';">
   <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
@@ -75,8 +75,7 @@
   <nav role="navigation" aria-label="Main site sections">
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-    <a href="#analytics">Dashboard</a>
+    <a href="#contact-dashboard">Dashboard</a>
   </nav>
 
   <!-- 👤 About Section -->
@@ -119,43 +118,57 @@
       </div>
     </section>
 
-    <!-- ✉️ Contact Section -->
-    <section id="contact" class="section fade-up">
-      <h2>Contact</h2>
-      <form id="contactForm" action="https://formspree.io/f/movpopra" method="POST" class="contact-form">
-        <label for="email">Email</label>
-        <input id="email" type="email" name="email" placeholder="Your Email" required>
+    <!-- 📨 Contact + 📊 Grafana + 🗺️ Map -->
+    <section id="contact-dashboard" class="section fade-up">
+      <h2>📬 Contact & Observability</h2>
+      <p>Connect with me, explore live metrics, and locate me on the map.</p>
 
-        <label for="message">Message</label>
-        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+      <div class="grid-three">
+        <!-- 📨 Contact Form -->
+        <div class="card">
+          <h3>Contact Me</h3>
+          <form id="contactForm" action="https://formspree.io/f/movpopra" method="POST" class="contact-form">
+            <label for="email">Email</label>
+            <input id="email" type="email" name="email" placeholder="Your Email" required>
 
-        <button type="submit">Send Message</button>
-        <p id="form-status"></p>
-      </form>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+
+            <button type="submit">Send Message</button>
+            <p id="form-status"></p>
+          </form>
+        </div>
+
+        <!-- 📊 Grafana Dashboard -->
+        <div class="card">
+          <h3>Grafana Dashboard</h3>
+          <iframe
+            src="http://localhost:4000/d-solo/ff35sojdcqv40e/portfolio-dashboard?orgId=1&refresh=10s"
+            sandbox="allow-same-origin allow-scripts allow-forms allow-popups"
+            referrerpolicy="no-referrer"
+            width="100%"
+            height="350"
+            style="border:none; border-radius:8px;"
+            loading="lazy"
+            title="Grafana Observability Dashboard">
+          </iframe>
+        </div>
+
+        <!-- 🗺️ Map -->
+        <div class="card">
+          <h3>Location</h3>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11773.874716932998!2d-71.8023!3d42.5836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e3b7b86ff5e6c9%3A0xf6b4b6a602f245cc!2sFitchburg%2C%20MA!5e0!3m2!1sen!2sus!4v1730688000000!5m2!1sen!2sus"
+            width="100%"
+            height="350"
+            style="border:none; border-radius:8px;"
+            allowfullscreen=""
+            loading="lazy"
+            title="Map showing Fitchburg, MA">
+          </iframe>
+        </div>
+      </div>
     </section>
-
-    <!-- 📊 Observability Dashboard Section -->
-  <section id="analytics" class="section fade-up">
-    <h2>📊 Observability Dashboard</h2>
-    <p>
-      Live infrastructure metrics and real-time analytics powered by
-      <a href="https://grafana.com" target="_blank" rel="noopener">Grafana</a>.
-    </p>
-
-    <div class="analytics-frame">
-      <iframe
-        src="http://localhost:4000/d-solo/ff35sojdcqv40e/portfolio-dashboard?orgId=1&refresh=10s"
-        sandbox="allow-same-origin allow-scripts allow-forms allow-popups"
-        referrerpolicy="no-referrer"
-        width="100%"
-        height="600"
-        style="border:none; border-radius:12px;"
-        loading="lazy"
-        title="Grafana Observability Dashboard">
-      </iframe>
-    </div>
-  </section>
-
   </main>
 
   <footer role="contentinfo">
