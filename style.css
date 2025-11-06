@@ -633,6 +633,36 @@ body.dark .footer {
   --chip-border: rgba(255, 153, 0, 0.45);
 }
 
+.skill-chip[data-icon="ec2"] {
+  --chip-icon: url('assets/icons/generated/ec2.svg');
+  --chip-color: rgba(255, 159, 28, 0.22);
+  --chip-border: rgba(255, 159, 28, 0.45);
+}
+
+.skill-chip[data-icon="s3"] {
+  --chip-icon: url('assets/icons/generated/s3.svg');
+  --chip-color: rgba(234, 67, 53, 0.22);
+  --chip-border: rgba(234, 67, 53, 0.45);
+}
+
+.skill-chip[data-icon="rds"] {
+  --chip-icon: url('assets/icons/generated/rds.svg');
+  --chip-color: rgba(0, 102, 204, 0.22);
+  --chip-border: rgba(0, 102, 204, 0.45);
+}
+
+.skill-chip[data-icon="eks"] {
+  --chip-icon: url('assets/icons/generated/eks.svg');
+  --chip-color: rgba(56, 189, 248, 0.22);
+  --chip-border: rgba(56, 189, 248, 0.45);
+}
+
+.skill-chip[data-icon="lambda"] {
+  --chip-icon: url('assets/icons/generated/lambda.svg');
+  --chip-color: rgba(255, 176, 0, 0.22);
+  --chip-border: rgba(255, 176, 0, 0.45);
+}
+
 .skill-chip[data-icon="azure"],
 .skill-chip[data-icon="arm"] {
   --chip-icon: url('assets/icons/generated/azure.svg');
@@ -640,10 +670,52 @@ body.dark .footer {
   --chip-border: rgba(0, 120, 212, 0.45);
 }
 
+.skill-chip[data-icon="aks"] {
+  --chip-icon: url('assets/icons/generated/aks.svg');
+  --chip-color: rgba(0, 153, 255, 0.22);
+  --chip-border: rgba(0, 153, 255, 0.45);
+}
+
+.skill-chip[data-icon="app-gateway"] {
+  --chip-icon: url('assets/icons/generated/app-gateway.svg');
+  --chip-color: rgba(99, 102, 241, 0.22);
+  --chip-border: rgba(99, 102, 241, 0.45);
+}
+
+.skill-chip[data-icon="key-vault"] {
+  --chip-icon: url('assets/icons/generated/key-vault.svg');
+  --chip-color: rgba(34, 197, 94, 0.22);
+  --chip-border: rgba(34, 197, 94, 0.45);
+}
+
 .skill-chip[data-icon="google-cloud"] {
   --chip-icon: url('assets/icons/generated/google-cloud.svg');
   --chip-color: rgba(66, 133, 244, 0.22);
   --chip-border: rgba(66, 133, 244, 0.45);
+}
+
+.skill-chip[data-icon="gke"] {
+  --chip-icon: url('assets/icons/generated/gke.svg');
+  --chip-color: rgba(59, 130, 246, 0.22);
+  --chip-border: rgba(59, 130, 246, 0.45);
+}
+
+.skill-chip[data-icon="cloud-build"] {
+  --chip-icon: url('assets/icons/generated/cloud-build.svg');
+  --chip-color: rgba(37, 99, 235, 0.22);
+  --chip-border: rgba(37, 99, 235, 0.45);
+}
+
+.skill-chip[data-icon="gcp-vpc"] {
+  --chip-icon: url('assets/icons/generated/gcp-vpc.svg');
+  --chip-color: rgba(15, 118, 110, 0.22);
+  --chip-border: rgba(15, 118, 110, 0.45);
+}
+
+.skill-chip[data-icon="gcp-iam"] {
+  --chip-icon: url('assets/icons/generated/gcp-iam.svg');
+  --chip-color: rgba(124, 58, 237, 0.22);
+  --chip-border: rgba(124, 58, 237, 0.45);
 }
 
 .skill-chip[data-icon="cloudformation"] {
@@ -670,6 +742,30 @@ body.dark .footer {
   --chip-border: rgba(123, 66, 188, 0.48);
 }
 
+.skill-chip[data-icon="cloud-governance"] {
+  --chip-icon: url('assets/icons/generated/cloud-governance.svg');
+  --chip-color: rgba(13, 148, 136, 0.22);
+  --chip-border: rgba(13, 148, 136, 0.45);
+}
+
+.skill-chip[data-icon="ref-architecture"] {
+  --chip-icon: url('assets/icons/generated/ref-architecture.svg');
+  --chip-color: rgba(79, 70, 229, 0.22);
+  --chip-border: rgba(79, 70, 229, 0.45);
+}
+
+.skill-chip[data-icon="cost-optimization"] {
+  --chip-icon: url('assets/icons/generated/cost-optimization.svg');
+  --chip-color: rgba(234, 179, 8, 0.22);
+  --chip-border: rgba(234, 179, 8, 0.45);
+}
+
+.skill-chip[data-icon="dr-strategy"] {
+  --chip-icon: url('assets/icons/generated/dr-strategy.svg');
+  --chip-color: rgba(248, 113, 113, 0.22);
+  --chip-border: rgba(248, 113, 113, 0.45);
+}
+
 .skill-chip[data-icon="ansible"] {
   --chip-icon: url('assets/icons/generated/ansible.svg');
   --chip-color: rgba(238, 0, 0, 0.2);
@@ -686,6 +782,18 @@ body.dark .footer {
   --chip-icon: url('assets/icons/generated/puppet.svg');
   --chip-color: rgba(255, 174, 26, 0.22);
   --chip-border: rgba(255, 174, 26, 0.45);
+}
+
+.skill-chip[data-icon="yaml"] {
+  --chip-icon: url('assets/icons/generated/yaml.svg');
+  --chip-color: rgba(14, 116, 144, 0.22);
+  --chip-border: rgba(14, 116, 144, 0.45);
+}
+
+.skill-chip[data-icon="json"] {
+  --chip-icon: url('assets/icons/generated/json.svg');
+  --chip-color: rgba(217, 119, 6, 0.22);
+  --chip-border: rgba(217, 119, 6, 0.45);
 }
 
 .skill-chip[data-icon="docker"] {
@@ -724,6 +832,30 @@ body.dark .footer {
   --chip-border: rgba(125, 67, 255, 0.45);
 }
 
+.skill-chip[data-icon="pod-disruption"] {
+  --chip-icon: url('assets/icons/generated/pod-disruption.svg');
+  --chip-color: rgba(147, 51, 234, 0.22);
+  --chip-border: rgba(147, 51, 234, 0.45);
+}
+
+.skill-chip[data-icon="rbac"] {
+  --chip-icon: url('assets/icons/generated/rbac.svg');
+  --chip-color: rgba(14, 165, 233, 0.22);
+  --chip-border: rgba(14, 165, 233, 0.45);
+}
+
+.skill-chip[data-icon="sidecar"] {
+  --chip-icon: url('assets/icons/generated/sidecar.svg');
+  --chip-color: rgba(249, 115, 22, 0.22);
+  --chip-border: rgba(249, 115, 22, 0.45);
+}
+
+.skill-chip[data-icon="runtime-security"] {
+  --chip-icon: url('assets/icons/generated/runtime-security.svg');
+  --chip-color: rgba(217, 70, 239, 0.22);
+  --chip-border: rgba(217, 70, 239, 0.45);
+}
+
 .skill-chip[data-icon="github-actions"] {
   --chip-icon: url('assets/icons/generated/github-actions.svg');
   --chip-color: rgba(32, 136, 255, 0.22);
@@ -754,6 +886,18 @@ body.dark .footer {
   --chip-border: rgba(17, 198, 179, 0.45);
 }
 
+.skill-chip[data-icon="argocd"] {
+  --chip-icon: url('assets/icons/generated/argocd.svg');
+  --chip-color: rgba(239, 123, 77, 0.22);
+  --chip-border: rgba(239, 123, 77, 0.45);
+}
+
+.skill-chip[data-icon="fluxcd"] {
+  --chip-icon: url('assets/icons/generated/fluxcd.svg');
+  --chip-color: rgba(14, 165, 233, 0.22);
+  --chip-border: rgba(14, 165, 233, 0.45);
+}
+
 .skill-chip[data-icon="snyk"] {
   --chip-icon: url('assets/icons/generated/snyk.svg');
   --chip-color: rgba(76, 74, 115, 0.24);
@@ -778,6 +922,18 @@ body.dark .footer {
   --chip-border: rgba(0, 125, 193, 0.45);
 }
 
+.skill-chip[data-icon="azure-ad"] {
+  --chip-icon: url('assets/icons/generated/azure-ad.svg');
+  --chip-color: rgba(59, 130, 246, 0.22);
+  --chip-border: rgba(59, 130, 246, 0.45);
+}
+
+.skill-chip[data-icon="vulcan"] {
+  --chip-icon: url('assets/icons/generated/vulcan.svg');
+  --chip-color: rgba(245, 158, 11, 0.22);
+  --chip-border: rgba(245, 158, 11, 0.45);
+}
+
 .skill-chip[data-icon="vault"] {
   --chip-icon: url('assets/icons/generated/vault.svg');
   --chip-color: rgba(255, 255, 255, 0.08);
@@ -788,6 +944,54 @@ body.dark .footer {
   --chip-icon: url('assets/icons/generated/trivy.svg');
   --chip-color: rgba(57, 143, 230, 0.22);
   --chip-border: rgba(57, 143, 230, 0.45);
+}
+
+.skill-chip[data-icon="aws-kms"] {
+  --chip-icon: url('assets/icons/generated/aws-kms.svg');
+  --chip-color: rgba(250, 204, 21, 0.22);
+  --chip-border: rgba(250, 204, 21, 0.45);
+}
+
+.skill-chip[data-icon="tfsec"] {
+  --chip-icon: url('assets/icons/generated/tfsec.svg');
+  --chip-color: rgba(248, 113, 113, 0.22);
+  --chip-border: rgba(248, 113, 113, 0.45);
+}
+
+.skill-chip[data-icon="checkov"] {
+  --chip-icon: url('assets/icons/generated/checkov.svg');
+  --chip-color: rgba(12, 74, 110, 0.22);
+  --chip-border: rgba(12, 74, 110, 0.45);
+}
+
+.skill-chip[data-icon="fortify"] {
+  --chip-icon: url('assets/icons/generated/fortify.svg');
+  --chip-color: rgba(236, 72, 153, 0.22);
+  --chip-border: rgba(236, 72, 153, 0.45);
+}
+
+.skill-chip[data-icon="nessus"] {
+  --chip-icon: url('assets/icons/generated/nessus.svg');
+  --chip-color: rgba(45, 212, 191, 0.22);
+  --chip-border: rgba(45, 212, 191, 0.45);
+}
+
+.skill-chip[data-icon="trendmicro"] {
+  --chip-icon: url('assets/icons/generated/trendmicro.svg');
+  --chip-color: rgba(220, 38, 38, 0.22);
+  --chip-border: rgba(220, 38, 38, 0.45);
+}
+
+.skill-chip[data-icon="hipaa"] {
+  --chip-icon: url('assets/icons/generated/hipaa.svg');
+  --chip-color: rgba(59, 130, 246, 0.22);
+  --chip-border: rgba(59, 130, 246, 0.45);
+}
+
+.skill-chip[data-icon="fedramp"] {
+  --chip-icon: url('assets/icons/generated/fedramp.svg');
+  --chip-color: rgba(30, 64, 175, 0.22);
+  --chip-border: rgba(30, 64, 175, 0.45);
 }
 
 .skill-chip[data-icon="prometheus"] {
@@ -824,6 +1028,30 @@ body.dark .footer {
   --chip-icon: url('assets/icons/generated/nagios.svg');
   --chip-color: rgba(15, 157, 88, 0.22);
   --chip-border: rgba(15, 157, 88, 0.45);
+}
+
+.skill-chip[data-icon="cloudwatch"] {
+  --chip-icon: url('assets/icons/generated/cloudwatch.svg');
+  --chip-color: rgba(99, 102, 241, 0.22);
+  --chip-border: rgba(99, 102, 241, 0.45);
+}
+
+.skill-chip[data-icon="elk"] {
+  --chip-icon: url('assets/icons/generated/elk.svg');
+  --chip-color: rgba(234, 179, 8, 0.22);
+  --chip-border: rgba(234, 179, 8, 0.45);
+}
+
+.skill-chip[data-icon="jaeger"] {
+  --chip-icon: url('assets/icons/generated/jaeger.svg');
+  --chip-color: rgba(251, 191, 36, 0.22);
+  --chip-border: rgba(251, 191, 36, 0.45);
+}
+
+.skill-chip[data-icon="xray"] {
+  --chip-icon: url('assets/icons/generated/xray.svg');
+  --chip-color: rgba(14, 165, 233, 0.22);
+  --chip-border: rgba(14, 165, 233, 0.45);
 }
 
 .skill-chip[data-icon="github"] {
@@ -958,6 +1186,12 @@ body.dark .footer {
   --chip-border: rgba(38, 132, 255, 0.45);
 }
 
+.skill-chip[data-icon="azure-boards"] {
+  --chip-icon: url('assets/icons/generated/azure-boards.svg');
+  --chip-color: rgba(14, 165, 233, 0.22);
+  --chip-border: rgba(14, 165, 233, 0.45);
+}
+
 .skill-chip[data-icon="servicenow"] {
   --chip-icon: url('assets/icons/generated/servicenow.svg');
   --chip-color: rgba(27, 181, 92, 0.22);
@@ -968,6 +1202,42 @@ body.dark .footer {
   --chip-icon: url('assets/icons/generated/confluence.svg');
   --chip-color: rgba(23, 43, 77, 0.22);
   --chip-border: rgba(23, 43, 77, 0.45);
+}
+
+.skill-chip[data-icon="stakeholder"] {
+  --chip-icon: url('assets/icons/generated/stakeholder.svg');
+  --chip-color: rgba(20, 184, 166, 0.22);
+  --chip-border: rgba(20, 184, 166, 0.45);
+}
+
+.skill-chip[data-icon="architecture-review"] {
+  --chip-icon: url('assets/icons/generated/architecture-review.svg');
+  --chip-color: rgba(59, 130, 246, 0.22);
+  --chip-border: rgba(59, 130, 246, 0.45);
+}
+
+.skill-chip[data-icon="leadership"] {
+  --chip-icon: url('assets/icons/generated/leadership.svg');
+  --chip-color: rgba(249, 115, 22, 0.22);
+  --chip-border: rgba(249, 115, 22, 0.45);
+}
+
+.skill-chip[data-icon="hpsm"] {
+  --chip-icon: url('assets/icons/generated/hpsm.svg');
+  --chip-color: rgba(99, 102, 241, 0.22);
+  --chip-border: rgba(99, 102, 241, 0.45);
+}
+
+.skill-chip[data-icon="bridge"] {
+  --chip-icon: url('assets/icons/generated/bridge.svg');
+  --chip-color: rgba(14, 116, 144, 0.22);
+  --chip-border: rgba(14, 116, 144, 0.45);
+}
+
+.skill-chip[data-icon="fixit"] {
+  --chip-icon: url('assets/icons/generated/fixit.svg');
+  --chip-color: rgba(239, 68, 68, 0.22);
+  --chip-border: rgba(239, 68, 68, 0.45);
 }
 
 .skill-points {

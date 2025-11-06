@@ -1,2 +1,5 @@
 hosting/
 assets/
+!assets/icons/
+!assets/icons/generated/
+!assets/icons/generated/**
