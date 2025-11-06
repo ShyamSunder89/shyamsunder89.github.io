@@ -456,6 +456,7 @@ body.dark .footer {
 .about-content p {
   margin-bottom: 1.25rem;
   text-align: justify;
+  text-justify: inter-word;
 }
 
 .profile-img {
