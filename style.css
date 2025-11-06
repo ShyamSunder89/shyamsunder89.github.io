@@ -620,344 +620,344 @@ body.dark .footer {
 }
 
 .skill-chip[data-icon="aws"] {
-  --chip-icon: url('https://cdn.simpleicons.org/amazonaws/ffffff');
+  --chip-icon: url('assets/icons/generated/aws.svg');
   --chip-color: rgba(255, 153, 0, 0.22);
   --chip-border: rgba(255, 153, 0, 0.45);
 }
 
 .skill-chip[data-icon="azure"],
 .skill-chip[data-icon="arm"] {
-  --chip-icon: url('https://cdn.simpleicons.org/microsoftazure/ffffff');
+  --chip-icon: url('assets/icons/generated/azure.svg');
   --chip-color: rgba(0, 120, 212, 0.22);
   --chip-border: rgba(0, 120, 212, 0.45);
 }
 
 .skill-chip[data-icon="google-cloud"] {
-  --chip-icon: url('https://cdn.simpleicons.org/googlecloud/ffffff');
+  --chip-icon: url('assets/icons/generated/google-cloud.svg');
   --chip-color: rgba(66, 133, 244, 0.22);
   --chip-border: rgba(66, 133, 244, 0.45);
 }
 
 .skill-chip[data-icon="cloudformation"] {
-  --chip-icon: url('https://cdn.simpleicons.org/amazoncloudformation/ffffff');
+  --chip-icon: url('assets/icons/generated/cloudformation.svg');
   --chip-color: rgba(140, 79, 255, 0.22);
   --chip-border: rgba(140, 79, 255, 0.45);
 }
 
 .skill-chip[data-icon="azure-devops"] {
-  --chip-icon: url('https://cdn.simpleicons.org/azuredevops/ffffff');
+  --chip-icon: url('assets/icons/generated/azure-devops.svg');
   --chip-color: rgba(0, 120, 215, 0.22);
   --chip-border: rgba(0, 120, 215, 0.45);
 }
 
 .skill-chip[data-icon="hybrid-cloud"] {
-  --chip-icon: url('https://cdn.simpleicons.org/ibmcloud/ffffff');
+  --chip-icon: url('assets/icons/generated/hybrid-cloud.svg');
   --chip-color: rgba(59, 130, 246, 0.18);
   --chip-border: rgba(59, 130, 246, 0.38);
 }
 
 .skill-chip[data-icon="terraform"] {
-  --chip-icon: url('https://cdn.simpleicons.org/terraform/ffffff');
+  --chip-icon: url('assets/icons/generated/terraform.svg');
   --chip-color: rgba(123, 66, 188, 0.24);
   --chip-border: rgba(123, 66, 188, 0.48);
 }
 
 .skill-chip[data-icon="ansible"] {
-  --chip-icon: url('https://cdn.simpleicons.org/ansible/ffffff');
+  --chip-icon: url('assets/icons/generated/ansible.svg');
   --chip-color: rgba(238, 0, 0, 0.2);
   --chip-border: rgba(238, 0, 0, 0.45);
 }
 
 .skill-chip[data-icon="chef"] {
-  --chip-icon: url('https://cdn.simpleicons.org/chef/ffffff');
+  --chip-icon: url('assets/icons/generated/chef.svg');
   --chip-color: rgba(240, 152, 32, 0.22);
   --chip-border: rgba(240, 152, 32, 0.45);
 }
 
 .skill-chip[data-icon="puppet"] {
-  --chip-icon: url('https://cdn.simpleicons.org/puppet/ffffff');
+  --chip-icon: url('assets/icons/generated/puppet.svg');
   --chip-color: rgba(255, 174, 26, 0.22);
   --chip-border: rgba(255, 174, 26, 0.45);
 }
 
 .skill-chip[data-icon="docker"] {
-  --chip-icon: url('https://cdn.simpleicons.org/docker/ffffff');
+  --chip-icon: url('assets/icons/generated/docker.svg');
   --chip-color: rgba(36, 150, 237, 0.2);
   --chip-border: rgba(36, 150, 237, 0.45);
 }
 
 .skill-chip[data-icon="kubernetes"] {
-  --chip-icon: url('https://cdn.simpleicons.org/kubernetes/ffffff');
+  --chip-icon: url('assets/icons/generated/kubernetes.svg');
   --chip-color: rgba(50, 108, 229, 0.22);
   --chip-border: rgba(50, 108, 229, 0.45);
 }
 
 .skill-chip[data-icon="openshift"] {
-  --chip-icon: url('https://cdn.simpleicons.org/redhatopenshift/ffffff');
+  --chip-icon: url('assets/icons/generated/openshift.svg');
   --chip-color: rgba(238, 0, 0, 0.22);
   --chip-border: rgba(238, 0, 0, 0.45);
 }
 
 .skill-chip[data-icon="helm"] {
-  --chip-icon: url('https://cdn.simpleicons.org/helm/ffffff');
+  --chip-icon: url('assets/icons/generated/helm.svg');
   --chip-color: rgba(15, 22, 137, 0.24);
   --chip-border: rgba(15, 22, 137, 0.48);
 }
 
 .skill-chip[data-icon="opa"] {
-  --chip-icon: url('https://cdn.simpleicons.org/openpolicyagent/ffffff');
+  --chip-icon: url('assets/icons/generated/opa.svg');
   --chip-color: rgba(15, 76, 129, 0.22);
   --chip-border: rgba(15, 76, 129, 0.45);
 }
 
 .skill-chip[data-icon="otel"] {
-  --chip-icon: url('https://cdn.simpleicons.org/opentelemetry/ffffff');
+  --chip-icon: url('assets/icons/generated/otel.svg');
   --chip-color: rgba(125, 67, 255, 0.22);
   --chip-border: rgba(125, 67, 255, 0.45);
 }
 
 .skill-chip[data-icon="github-actions"] {
-  --chip-icon: url('https://cdn.simpleicons.org/githubactions/ffffff');
+  --chip-icon: url('assets/icons/generated/github-actions.svg');
   --chip-color: rgba(32, 136, 255, 0.22);
   --chip-border: rgba(32, 136, 255, 0.45);
 }
 
 .skill-chip[data-icon="gitlab"] {
-  --chip-icon: url('https://cdn.simpleicons.org/gitlab/ffffff');
+  --chip-icon: url('assets/icons/generated/gitlab.svg');
   --chip-color: rgba(252, 109, 38, 0.22);
   --chip-border: rgba(252, 109, 38, 0.45);
 }
 
 .skill-chip[data-icon="jenkins"] {
-  --chip-icon: url('https://cdn.simpleicons.org/jenkins/ffffff');
+  --chip-icon: url('assets/icons/generated/jenkins.svg');
   --chip-color: rgba(210, 73, 57, 0.22);
   --chip-border: rgba(210, 73, 57, 0.45);
 }
 
 .skill-chip[data-icon="bamboo"] {
-  --chip-icon: url('https://cdn.simpleicons.org/bamboo/ffffff');
+  --chip-icon: url('assets/icons/generated/bamboo.svg');
   --chip-color: rgba(0, 82, 204, 0.2);
   --chip-border: rgba(0, 82, 204, 0.42);
 }
 
 .skill-chip[data-icon="teamcity"] {
-  --chip-icon: url('https://cdn.simpleicons.org/teamcity/ffffff');
+  --chip-icon: url('assets/icons/generated/teamcity.svg');
   --chip-color: rgba(17, 198, 179, 0.22);
   --chip-border: rgba(17, 198, 179, 0.45);
 }
 
 .skill-chip[data-icon="snyk"] {
-  --chip-icon: url('https://cdn.simpleicons.org/snyk/ffffff');
+  --chip-icon: url('assets/icons/generated/snyk.svg');
   --chip-color: rgba(76, 74, 115, 0.24);
   --chip-border: rgba(76, 74, 115, 0.48);
 }
 
 .skill-chip[data-icon="sonarqube"] {
-  --chip-icon: url('https://cdn.simpleicons.org/sonarqube/ffffff');
+  --chip-icon: url('assets/icons/generated/sonarqube.svg');
   --chip-color: rgba(78, 155, 205, 0.22);
   --chip-border: rgba(78, 155, 205, 0.45);
 }
 
 .skill-chip[data-icon="rapid7"] {
-  --chip-icon: url('https://cdn.simpleicons.org/rapid7/ffffff');
+  --chip-icon: url('assets/icons/generated/rapid7.svg');
   --chip-color: rgba(255, 108, 55, 0.22);
   --chip-border: rgba(255, 108, 55, 0.45);
 }
 
 .skill-chip[data-icon="okta"] {
-  --chip-icon: url('https://cdn.simpleicons.org/okta/ffffff');
+  --chip-icon: url('assets/icons/generated/okta.svg');
   --chip-color: rgba(0, 125, 193, 0.22);
   --chip-border: rgba(0, 125, 193, 0.45);
 }
 
 .skill-chip[data-icon="vault"] {
-  --chip-icon: url('https://cdn.simpleicons.org/hashicorp/ffffff');
+  --chip-icon: url('assets/icons/generated/vault.svg');
   --chip-color: rgba(255, 255, 255, 0.08);
   --chip-border: rgba(255, 255, 255, 0.28);
 }
 
 .skill-chip[data-icon="trivy"] {
-  --chip-icon: url('https://cdn.simpleicons.org/aquasecurity/ffffff');
+  --chip-icon: url('assets/icons/generated/trivy.svg');
   --chip-color: rgba(57, 143, 230, 0.22);
   --chip-border: rgba(57, 143, 230, 0.45);
 }
 
 .skill-chip[data-icon="prometheus"] {
-  --chip-icon: url('https://cdn.simpleicons.org/prometheus/ffffff');
+  --chip-icon: url('assets/icons/generated/prometheus.svg');
   --chip-color: rgba(230, 82, 44, 0.22);
   --chip-border: rgba(230, 82, 44, 0.45);
 }
 
 .skill-chip[data-icon="grafana"] {
-  --chip-icon: url('https://cdn.simpleicons.org/grafana/ffffff');
+  --chip-icon: url('assets/icons/generated/grafana.svg');
   --chip-color: rgba(244, 104, 0, 0.22);
   --chip-border: rgba(244, 104, 0, 0.45);
 }
 
 .skill-chip[data-icon="elastic"] {
-  --chip-icon: url('https://cdn.simpleicons.org/elastic/ffffff');
+  --chip-icon: url('assets/icons/generated/elastic.svg');
   --chip-color: rgba(0, 85, 113, 0.22);
   --chip-border: rgba(0, 85, 113, 0.45);
 }
 
 .skill-chip[data-icon="datadog"] {
-  --chip-icon: url('https://cdn.simpleicons.org/datadog/ffffff');
+  --chip-icon: url('assets/icons/generated/datadog.svg');
   --chip-color: rgba(99, 44, 166, 0.22);
   --chip-border: rgba(99, 44, 166, 0.45);
 }
 
 .skill-chip[data-icon="splunk"] {
-  --chip-icon: url('https://cdn.simpleicons.org/splunk/ffffff');
+  --chip-icon: url('assets/icons/generated/splunk.svg');
   --chip-color: rgba(255, 255, 255, 0.1);
   --chip-border: rgba(255, 255, 255, 0.3);
 }
 
 .skill-chip[data-icon="nagios"] {
-  --chip-icon: url('https://cdn.simpleicons.org/nagios/ffffff');
+  --chip-icon: url('assets/icons/generated/nagios.svg');
   --chip-color: rgba(15, 157, 88, 0.22);
   --chip-border: rgba(15, 157, 88, 0.45);
 }
 
 .skill-chip[data-icon="github"] {
-  --chip-icon: url('https://cdn.simpleicons.org/github/ffffff');
+  --chip-icon: url('assets/icons/generated/github.svg');
   --chip-color: rgba(24, 23, 23, 0.24);
   --chip-border: rgba(24, 23, 23, 0.48);
 }
 
 .skill-chip[data-icon="bitbucket"] {
-  --chip-icon: url('https://cdn.simpleicons.org/bitbucket/ffffff');
+  --chip-icon: url('assets/icons/generated/bitbucket.svg');
   --chip-color: rgba(0, 82, 204, 0.22);
   --chip-border: rgba(0, 82, 204, 0.45);
 }
 
 .skill-chip[data-icon="svn"] {
-  --chip-icon: url('https://cdn.simpleicons.org/subversion/ffffff');
+  --chip-icon: url('assets/icons/generated/svn.svg');
   --chip-color: rgba(128, 156, 201, 0.22);
   --chip-border: rgba(128, 156, 201, 0.45);
 }
 
 .skill-chip[data-icon="nexus"] {
-  --chip-icon: url('https://cdn.simpleicons.org/sonatype/ffffff');
+  --chip-icon: url('assets/icons/generated/nexus.svg');
   --chip-color: rgba(12, 29, 62, 0.22);
   --chip-border: rgba(12, 29, 62, 0.45);
 }
 
 .skill-chip[data-icon="jfrog"] {
-  --chip-icon: url('https://cdn.simpleicons.org/jfrog/ffffff');
+  --chip-icon: url('assets/icons/generated/jfrog.svg');
   --chip-color: rgba(65, 191, 71, 0.22);
   --chip-border: rgba(65, 191, 71, 0.45);
 }
 
 .skill-chip[data-icon="aws-ecr"] {
-  --chip-icon: url('https://cdn.simpleicons.org/amazonaws/ffffff');
+  --chip-icon: url('assets/icons/generated/aws-ecr.svg');
   --chip-color: rgba(255, 153, 0, 0.2);
   --chip-border: rgba(255, 153, 0, 0.4);
 }
 
 .skill-chip[data-icon="mysql"] {
-  --chip-icon: url('https://cdn.simpleicons.org/mysql/ffffff');
+  --chip-icon: url('assets/icons/generated/mysql.svg');
   --chip-color: rgba(68, 121, 161, 0.22);
   --chip-border: rgba(68, 121, 161, 0.45);
 }
 
 .skill-chip[data-icon="sqlserver"] {
-  --chip-icon: url('https://cdn.simpleicons.org/microsoftsqlserver/ffffff');
+  --chip-icon: url('assets/icons/generated/sqlserver.svg');
   --chip-color: rgba(204, 41, 39, 0.22);
   --chip-border: rgba(204, 41, 39, 0.45);
 }
 
 .skill-chip[data-icon="postgresql"] {
-  --chip-icon: url('https://cdn.simpleicons.org/postgresql/ffffff');
+  --chip-icon: url('assets/icons/generated/postgresql.svg');
   --chip-color: rgba(65, 105, 225, 0.22);
   --chip-border: rgba(65, 105, 225, 0.45);
 }
 
 .skill-chip[data-icon="graphdb"] {
-  --chip-icon: url('https://cdn.simpleicons.org/neo4j/ffffff');
+  --chip-icon: url('assets/icons/generated/graphdb.svg');
   --chip-color: rgba(0, 140, 193, 0.22);
   --chip-border: rgba(0, 140, 193, 0.45);
 }
 
 .skill-chip[data-icon="python"] {
-  --chip-icon: url('https://cdn.simpleicons.org/python/ffffff');
+  --chip-icon: url('assets/icons/generated/python.svg');
   --chip-color: rgba(55, 118, 171, 0.22);
   --chip-border: rgba(55, 118, 171, 0.45);
 }
 
 .skill-chip[data-icon="bash"] {
-  --chip-icon: url('https://cdn.simpleicons.org/gnubash/ffffff');
+  --chip-icon: url('assets/icons/generated/bash.svg');
   --chip-color: rgba(78, 170, 37, 0.22);
   --chip-border: rgba(78, 170, 37, 0.45);
 }
 
 .skill-chip[data-icon="powershell"] {
-  --chip-icon: url('https://cdn.simpleicons.org/powershell/ffffff');
+  --chip-icon: url('assets/icons/generated/powershell.svg');
   --chip-color: rgba(83, 145, 254, 0.22);
   --chip-border: rgba(83, 145, 254, 0.45);
 }
 
 .skill-chip[data-icon="groovy"] {
-  --chip-icon: url('https://cdn.simpleicons.org/apachegroovy/ffffff');
+  --chip-icon: url('assets/icons/generated/groovy.svg');
   --chip-color: rgba(66, 152, 184, 0.22);
   --chip-border: rgba(66, 152, 184, 0.45);
 }
 
 .skill-chip[data-icon="java"] {
-  --chip-icon: url('https://cdn.simpleicons.org/java/ffffff');
+  --chip-icon: url('assets/icons/generated/java.svg');
   --chip-color: rgba(234, 45, 46, 0.22);
   --chip-border: rgba(234, 45, 46, 0.45);
 }
 
 .skill-chip[data-icon="javascript"] {
-  --chip-icon: url('https://cdn.simpleicons.org/javascript/000000');
+  --chip-icon: url('assets/icons/generated/javascript.svg');
   --chip-color: rgba(247, 223, 30, 0.4);
   --chip-border: rgba(247, 223, 30, 0.65);
 }
 
 .skill-chip[data-icon="maven"] {
-  --chip-icon: url('https://cdn.simpleicons.org/apachemaven/ffffff');
+  --chip-icon: url('assets/icons/generated/maven.svg');
   --chip-color: rgba(199, 26, 54, 0.22);
   --chip-border: rgba(199, 26, 54, 0.45);
 }
 
 .skill-chip[data-icon="gradle"] {
-  --chip-icon: url('https://cdn.simpleicons.org/gradle/ffffff');
+  --chip-icon: url('assets/icons/generated/gradle.svg');
   --chip-color: rgba(2, 48, 58, 0.24);
   --chip-border: rgba(2, 48, 58, 0.48);
 }
 
 .skill-chip[data-icon="ant"] {
-  --chip-icon: url('https://cdn.simpleicons.org/apacheant/ffffff');
+  --chip-icon: url('assets/icons/generated/ant.svg');
   --chip-color: rgba(168, 28, 125, 0.22);
   --chip-border: rgba(168, 28, 125, 0.45);
 }
 
 .skill-chip[data-icon="npm"] {
-  --chip-icon: url('https://cdn.simpleicons.org/npm/ffffff');
+  --chip-icon: url('assets/icons/generated/npm.svg');
   --chip-color: rgba(203, 56, 55, 0.22);
   --chip-border: rgba(203, 56, 55, 0.45);
 }
 
 .skill-chip[data-icon="msbuild"] {
-  --chip-icon: url('https://cdn.simpleicons.org/msbuild/ffffff');
+  --chip-icon: url('assets/icons/generated/msbuild.svg');
   --chip-color: rgba(81, 43, 212, 0.22);
   --chip-border: rgba(81, 43, 212, 0.45);
 }
 
 .skill-chip[data-icon="jira"] {
-  --chip-icon: url('https://cdn.simpleicons.org/jira/ffffff');
+  --chip-icon: url('assets/icons/generated/jira.svg');
   --chip-color: rgba(38, 132, 255, 0.22);
   --chip-border: rgba(38, 132, 255, 0.45);
 }
 
 .skill-chip[data-icon="servicenow"] {
-  --chip-icon: url('https://cdn.simpleicons.org/servicenow/ffffff');
+  --chip-icon: url('assets/icons/generated/servicenow.svg');
   --chip-color: rgba(27, 181, 92, 0.22);
   --chip-border: rgba(27, 181, 92, 0.45);
 }
 
 .skill-chip[data-icon="confluence"] {
-  --chip-icon: url('https://cdn.simpleicons.org/confluence/ffffff');
+  --chip-icon: url('assets/icons/generated/confluence.svg');
   --chip-color: rgba(23, 43, 77, 0.22);
   --chip-border: rgba(23, 43, 77, 0.45);
 }
