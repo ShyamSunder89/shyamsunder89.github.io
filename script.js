@@ -48,6 +48,34 @@ document.addEventListener('DOMContentLoaded', () => {
             themeToggle.textContent = newTheme === 'light' ? '☀️' : '🌙';
         }
     });
+
+    const syncSkillCategory = (button, expanded) => {
+        const indicator = button.querySelector('.toggle-indicator');
+        if (indicator) {
+            indicator.textContent = expanded ? '–' : '+';
+        }
+        button.classList.toggle('expanded', expanded);
+    };
+
+    document.querySelectorAll('.skill-category-header').forEach(button => {
+        const targetId = button.getAttribute('data-target');
+        const target = document.getElementById(targetId);
+        if (!target) {
+            return;
+        }
+
+        const expanded = button.getAttribute('aria-expanded') === 'true';
+        target.hidden = !expanded;
+        syncSkillCategory(button, expanded);
+
+        button.addEventListener('click', () => {
+            const isExpanded = button.getAttribute('aria-expanded') === 'true';
+            const nextState = !isExpanded;
+            button.setAttribute('aria-expanded', String(nextState));
+            target.hidden = !nextState;
+            syncSkillCategory(button, nextState);
+        });
+    });
 });
 
 // Intersection Observer for fade animations
