@@ -244,10 +244,13 @@ body.light .ambient-orbs .orb {
 }
 
 .hero h2 {
-  font-weight: 400;
-  color: var(--text);
+  font-weight: 500;
   margin-bottom: 1rem;
   font-size: 1.8rem;
+  background: linear-gradient(120deg, #0ea5e9, #60a5fa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .tagline {
