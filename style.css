@@ -464,55 +464,83 @@ nav a:hover {
   transform: translate(50%, -50%);
 }
 
-.skill-category h3 {
-  color: var(--accent);
-  margin-bottom: 1.5rem;
-  font-size: 1.4rem;
-  text-align: left;
+.skill-category-header {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
 }
 
-.skill-category h3 .skill-icon {
-  font-size: 1.5rem;
-  opacity: 0.9;
-}
-
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
-}
-
-.skill-item {
-  background: var(--bg-dark);
-  border-radius: var(--radius);
-  padding: 1.25rem;
-  transition: all 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  position: relative;
-  overflow: hidden;
-}
-
-.skill-item:hover {
-  transform: translateY(-2px);
-  border-color: var(--accent);
-  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.1);
-}
-
-.skill-name {
+.skill-category-header h3 {
+  color: var(--accent);
+  font-size: 1.4rem;
   font-weight: 600;
-  color: var(--text);
+}
+
+.category-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+}
+
+.skill-chip-list {
   display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.skill-chip {
+  display: inline-flex;
   align-items: center;
   gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+  background: var(--bg-dark);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--text);
+  font-size: 0.95rem;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
-.skill-description {
+.skill-chip:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(56, 189, 248, 0.25);
+  border-color: rgba(56, 189, 248, 0.5);
+}
+
+.skill-chip img {
+  width: 22px;
+  height: 22px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.25));
+}
+
+.skill-points {
+  list-style: none;
+  padding-left: 0;
+  display: grid;
+  gap: 0.75rem;
   color: var(--text-muted);
   font-size: 0.95rem;
-  line-height: 1.5;
+  line-height: 1.6;
+}
+
+.skill-points li {
+  position: relative;
+  padding-left: 1.75rem;
+}
+
+.skill-points li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--accent);
+  font-weight: 600;
+}
 }
 
 /* Highlight Download Resume button */
@@ -798,8 +826,18 @@ nav a:hover {
     grid-template-columns: 1fr;
   }
 
+  .skill-chip {
+    flex: 1 1 calc(50% - 0.75rem);
+  }
+
   .theme-btn {
     top: 15px;
     right: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .skill-chip {
+    flex: 1 1 100%;
   }
 }
