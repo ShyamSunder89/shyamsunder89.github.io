@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const syncSkillCategory = (button, expanded) => {
         const indicator = button.querySelector('.toggle-indicator');
         if (indicator) {
-            indicator.textContent = expanded ? '▾' : '▸';
+            indicator.textContent = expanded ? '–' : '+';
         }
         button.classList.toggle('expanded', expanded);
     };
