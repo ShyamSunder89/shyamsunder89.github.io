@@ -446,10 +446,10 @@ body.dark .footer {
 
 /* About Section */
 .about-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 2rem;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  align-items: flex-start;
   margin-top: 2rem;
 }
 
@@ -459,10 +459,17 @@ body.dark .footer {
   text-justify: inter-word;
 }
 
+.profile-hero {
+  align-self: stretch;
+  display: flex;
+  justify-content: center;
+}
+
 .profile-img {
   border-radius: var(--radius);
-  width: 100%;
-  height: auto;
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
   box-shadow: var(--shadow);
 }
 
